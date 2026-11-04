@@ -1,0 +1,4383 @@
+local v0="3.5";
+local v1="6.0";
+local v2="1.3";
+local v3=game:GetService("Players");
+local v4=game:GetService("ReplicatedStorage");
+local v5=game:GetService("TweenService");
+local v6=game:GetService("UserInputService");
+local v7=game:GetService("VirtualInputManager");
+local v8=v3.LocalPlayer;
+local v9="";
+local v10="rbxthumb://type=Asset&id=123342865556268&w=420&h=420";
+local function v11()if(v10~="")then
+  return v10;
+end
+if(v9=="")then
+  return nil;
+end
+if not(writefile and getcustomasset)then
+  return nil, "executor tidak mendukung writefile/getcustomasset";
+end
+local v128, v129=pcall(function()writefile("fian792_logo.png", game:HttpGet(v9));
+  return getcustomasset("fian792_logo.png");
+end
+);
+if(v128 and v129)then
+  return v129;
+end
+return nil, "gagal mengunduh logo (cek link gambar)";
+end
+getgenv().PP=getgenv().PP or{};
+local v13=getgenv().PP;
+pcall(function()getgenv().HubStop();
+end
+);
+pcall(function()getgenv().T3FStop();
+end
+);
+pcall(function()getgenv().DFStop();
+end
+);
+pcall(function()getgenv().CWStop();
+end
+);
+pcall(function()getgenv().DG:Destroy();
+end
+);
+pcall(function()game:GetService("CoreGui").Fian792:Destroy();
+end
+);
+pcall(function()gethui().Fian792:Destroy();
+end
+);
+pcall(function()v8.PlayerGui.Fian792:Destroy();
+end
+);
+pcall(function()gethui().DFGui:Destroy();
+end
+);
+pcall(function()v8.PlayerGui.DFGui:Destroy();
+end
+);
+pcall(function()game:GetService("CoreGui").CWTestGui:Destroy();
+end
+);
+pcall(function()gethui().CWTestGui:Destroy();
+end
+);
+pcall(function()v8.PlayerGui.CWTestGui:Destroy();
+end
+);
+local v14=v4:FindFirstChild("ByteNetUnreliable");
+if(v14 and not getgenv().PosHook)then
+  local v609=0;
+  local v610;
+  while true do
+    if(v609==0)Kemudian getgenv().PosHook=true;
+    v610=pcall(function()local v1459=0;
+      local v1460;
+      while true do
+        if(0==v1459)then
+          v1460=nil;
+          v1460=hookmetamethod(game, "__namecall", newcclosure(function(v1728, ...)if((v1728==v14)and(getnamecallmethod()=="FireServer")and not checkcaller())then
+            local v1812=0;
+            local v1813;
+            while true do
+              if(v1812==0)then
+                v1813=...;
+                if((typeof(v1813)=="buffer")and(buffer.len(v1813)>=9)and(buffer.readu8(v1813, 0)==2))maka lokal v1886=0;
+                selama benar lakukan jika(v1886==0)maka v13.y=buffer.readf32(v1813, 1);
+                v13.x=buffer.readf32(v1813, 5);
+                break;
+                akhir akhir akhir break;
+                akhir akhir akhir kembalikan v1460(v1728, ...);
+                akhir));
+                break;
+                akhir akhir akhir);
+                v609=1;
+                akhir jika(v609==1)maka jika bukan v610 maka getgenv().PosHook=false;
+                akhir break;
+                akhir akhir akhir lokal v15=Color3.fromRGB;
+                lokal v16={bg=v15(12, 12, 18), panel=v15(18, 18, 27), card=v15(25, 25, 37), card2=v15(32, 32, 48), line=v15(48, 44, 90), acc=v15(124, 92, 255), acc2=v15(70, 200, 255), wh=v15(240, 240, 250), dm=v15(140, 140, 168), ON=v15(60, 210, 120), OFF=v15(58, 58, 78), RED=v15(235, 80, 90), YEL=v15(255, 190, 70)};
+                local v17={b=Enum.Font.GothamBold, r=Enum.Font.Gotham, m=Enum.Font.GothamMedium};
+                local v18, v19=Enum.TextXAlignment.Left, Enum.TextXAlignment.Right;
+                local function v20(v130, v131, v132)local v133=Instance.new(v130);
+                  pcall(function()v133.BorderSizePixel=0;
+                  end
+                  );
+                  for v612, v613 in pairs(v131)do
+                    pcall(function()v133[v612]=v613;
+                    end
+                    );
+                  end
+                  v133.Parent=v132;
+                  return v133;
+                end
+                local function v21(v135, v136)pcall(function()local v614=Instance.new("UICorner");
+                  v614.CornerRadius=UDim.new(0, v136);
+                  v614.Parent=v135;
+                end
+                );
+              end
+              local function v22(v137, v138, v139, v140)local v141;
+                pcall(function()local v617=0;
+                  while true do
+                    if(v617==2)maka v141.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;
+                    v141.Parent=v137;
+                    break;
+                  end
+                  jika(v617==1)maka v141.Thickness=v139 atau 1;
+                  v141.Transparency=v140 atau 0;
+                  v617=2;
+                end
+                jika(v617==0)maka v141=Instance.new("UIStroke");
+                v141.Color=v138;
+                v617=1;
+              end
+            end
+          end
+          );
+          return v141;
+        end
+        local function v23(v142, v143, v144, v145)pcall(function()local v618=Instance.new("UIGradient");
+          v618.Color=ColorSequence.new(v143, v144);
+          v618.Rotation=v145 or 0;
+          v618.Parent=v142;
+        end
+        );
+      end
+      local function v24(v146, v147, v148, v149, v150)v20("UIPadding",{PaddingTop=UDim.new(0, v147 or 0), PaddingLeft=UDim.new(0, v148 or 0), PaddingRight=UDim.new(0, v149 or 0), PaddingBottom=UDim.new(0, v150 or 0)}, v146);
+      end
+      local function v25(v151, v152, v153, v154, v155)local v156, v157=pcall(function()return v5:Create(v151, TweenInfo.new(v152, v154 or Enum.EasingStyle.Quad, v155 or Enum.EasingDirection.Out), v153);
+      end
+      );
+      if(v156 and v157)then
+        v157:Play();
+        return v157;
+      end
+    end
+    local function v26(v158)local v159=0;
+      local v160;
+      while true do
+        if(v159==1)then
+          v158.MouseEnter:Connect(function()v25(v160, 0.15,{Transparency=0.25});
+          end
+          );
+          v158.MouseLeave:Connect(function()v25(v160, 0.15,{Transparency=1});
+          end
+          );
+          break;
+        end
+        if(v159==0)then
+          v160=v22(v158, v16.acc2, 1, 1);
+          if not v160 then
+            return;
+          end
+          v159=1;
+        end
+      end
+    end
+    local v27={};
+    local v28={};
+    local function v29(v161)for v622, v623 in ipairs(v28)do
+      pcall(v623, v161);
+    end
+  end
+  local v30;
+  local v31=v20("ScreenGui",{Name="Fian792", ResetOnSpawn=false, DisplayOrder=999999, ZIndexBehavior=Enum.ZIndexBehavior.Sibling}, nil);
+  local v32=workspace.CurrentCamera.ViewportSize;
+  local v33=math.clamp(math.min(v32.X/600, v32.Y/400), 0.6, 1);
+  local v34=v20("Frame",{Size=UDim2.new(0, 540, 0, 360), AnchorPoint=Vector2.new(0.5, 0.5), Position=UDim2.new(0.5, 0, 0.5, 0), BackgroundColor3=v16.bg, Active=true}, v31);
+  v21(v34, 14);
+  v22(v34, v16.line, 1.5);
+  local v35=v20("UIScale",{Scale=v33}, v34);
+  local v36=v20("Frame",{Size=UDim2.new(1, 0, 0, 46), BackgroundColor3=v16.panel, Active=true}, v34);
+  v21(v36, 14);
+  v20("Frame",{Size=UDim2.new(1, 0, 0, 14), Position=UDim2.new(0, 0, 1,-14), BackgroundColor3=v16.panel}, v36);
+  local v37=v20("Frame",{Size=UDim2.new(1, 0, 0, 2), Position=UDim2.new(0, 0, 0, 46), BackgroundColor3=v16.wh}, v34);
+  v23(v37, v16.acc, v16.acc2);
+  local v38=v20("TextLabel",{Size=UDim2.new(0, 30, 0, 30), Position=UDim2.new(0, 10, 0.5,-15), BackgroundColor3=v16.wh, Text="J", TextColor3=v16.wh, TextSize=17, Font=v17.b}, v36);
+  v21(v38, 9);
+  v23(v38, v16.acc, v16.acc2, 45);
+  v20("TextLabel",{Size=UDim2.new(0, 150, 0, 18), Position=UDim2.new(0, 48, 0, 7), BackgroundTransparency=1, Text="Fian792 Hub", TextColor3=v16.wh, TextSize=15, Font=v17.b, TextXAlignment=v18}, v36);
+  v20("TextLabel",{Size=UDim2.new(0, 220, 0, 14), Position=UDim2.new(0, 48, 0, 25), BackgroundTransparency=1, Text="Farm • Auto DF • Clear Dunia • Alat", TextColor3=v16.dm, TextSize=10, Font=v17.r, TextXAlignment=v18}, v36);
+  local v39=v20("TextLabel",{Size=UDim2.new(0, 38, 0, 16), Position=UDim2.new(0, 142, 0, 8), BackgroundColor3=v16.card2, Text="v" .. v0, TextColor3=v16.acc2, TextSize=10, Font=v17.b}, v36);
+  v21(v39, 8);
+  local v40=v20("TextButton",{Size=UDim2.new(0, 28, 0, 26), Position=UDim2.new(1,-72, 0.5,-13), AutoButtonColor=false, BackgroundColor3=v16.card, Text="–", TextColor3=v16.wh, TextSize=16, Font=v17.b}, v36);
+  v21(v40, 8);
+  v26(v40);
+  local v41=v20("TextButton",{Size=UDim2.new(0, 28, 0, 26), Position=UDim2.new(1,-38, 0.5,-13), AutoButtonColor=false, BackgroundColor3=v16.RED, Text="X", TextColor3=v16.wh, TextSize=13, Font=v17.b}, v36);
+  v21(v41, 8);
+  v26(v41);
+  local v42=v20("Frame",{Size=UDim2.new(0, 136, 1,-96), Position=UDim2.new(0, 10, 0, 58), BackgroundColor3=v16.panel}, v34);
+  v21(v42, 10);
+  local v43=v20("ScrollingFrame",{Size=UDim2.new(1, 0, 1,-54), BackgroundTransparency=1, ScrollBarThickness=2, ScrollBarImageColor3=v16.acc, CanvasSize=UDim2.new(0, 0, 0, 0), AutomaticCanvasSize=Enum.AutomaticSize.Y}, v42);
+  v20("UIListLayout",{Padding=UDim.new(0, 3), SortOrder=Enum.SortOrder.LayoutOrder}, v43);
+  v24(v43, 6, 6, 6, 6);
+  local v44=v20("Frame",{Size=UDim2.new(1,-12, 0, 42), Position=UDim2.new(0, 6, 1,-48), BackgroundColor3=v16.card}, v42);
+  v21(v44, 8);
+  local v45=v20("ImageLabel",{Size=UDim2.new(0, 30, 0, 30), Position=UDim2.new(0, 6, 0.5,-15), BackgroundColor3=v16.bg, Image=""}, v44);
+  v21(v45, 15);
+  v20("TextLabel",{Size=UDim2.new(1,-46, 0, 14), Position=UDim2.new(0, 42, 0, 7), BackgroundTransparency=1, Text=v8.DisplayName, TextColor3=v16.wh, TextSize=11, Font=v17.b, TextXAlignment=v18, TextTruncate=Enum.TextTruncate.AtEnd}, v44);
+  v20("TextLabel",{Size=UDim2.new(1,-46, 0, 12), Position=UDim2.new(0, 42, 0, 22), BackgroundTransparency=1, Text="@" .. v8.Name, TextColor3=v16.dm, TextSize=9, Font=v17.r, TextXAlignment=v18, TextTruncate=Enum.TextTruncate.AtEnd}, v44);
+  task.spawn(function()local v162=0;
+    local v163;
+    local v164;
+    while true do
+      if(v162==0)then
+        v163, v164=pcall(function()return v3:GetUserThumbnailAsync(v8.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48);
+        end
+        );
+        if(v163 and v164)then
+          v45.Image=v164;
+        end
+        break;
+      end
+    end
+  end
+  );
+  local v46=v20("Frame",{Size=UDim2.new(1,-166, 1,-96), Position=UDim2.new(0, 156, 0, 58), BackgroundTransparency=1}, v34);
+  local v47=v20("TextLabel",{Size=UDim2.new(1, 0, 0, 20), BackgroundTransparency=1, Text="", TextColor3=v16.wh, TextSize=17, Font=v17.b, TextXAlignment=v18}, v46);
+  local v48=v20("TextLabel",{Size=UDim2.new(1, 0, 0, 14), Position=UDim2.new(0, 0, 0, 21), BackgroundTransparency=1, Text="", TextColor3=v16.dm, TextSize=11, Font=v17.r, TextXAlignment=v18}, v46);
+  local v49=v20("Frame",{Size=UDim2.new(1, 0, 1,-42), Posisi=UDim2.new(0, 0, 0, 42), TransparansiLatarBelakang=1, ClipsDescendants=true}, v46);
+  local v50=v20("Bingkai",{Ukuran=UDim2.new(1,-20, 0, 26), Posisi=UDim2.new(0, 10, 1,-32), WarnaLatarBelakang3=v16.panel}, v34);
+  v21(v50, 8);
+  local v51=v20("Bingkai",{Ukuran=UDim2.new(0, 8, 0, 8), Position=UDim2.new(0, 10, 0.5,-4), BackgroundColor3=v16.ON}, v50);
+  v21(v51, 4);
+  local v52=v20("TextLabel",{Size=UDim2.new(1,-170, 1, 0), Position=UDim2.new(0, 24, 0, 0), BackgroundTransparency=1, Text="Siap", TextColor3=v16.dm, TextSize=11, Font=v17.m, TextXAlignment=v18, TextTruncate=Enum.TextTruncate.AtEnd}, v50);
+  v20("TextLabel",{Size=UDim2.new(0, 140, 1, 0), Position=UDim2.new(1,-150, 0, 0), BackgroundTransparency=1, Text="RightShift = s disembunyikan", TextColor3=v16.OFF, TextSize=10, Font=v17.r, TextXAlignment=v19}, v50);
+  local function v53(v165, v166)local v167=0;
+    while true do
+      if(v167==0)then
+        v52.Text=tostring(v165);
+        v51.BackgroundColor3=v166 or v16.ON;
+        break;
+      end
+    end
+  end
+  local v54=v20("Frame",{Size=UDim2.new(0, 240, 0, 300), AnchorPoint=Vector2.v31=new(1, 1), Position=UDim2.new(1,-12, 1,-12), BackgroundTransparency=1}, v31);
+  v20("UIListLayout",{Padding=UDim.new(0, 6), SortOrder=Enum.SortOrder.LayoutOrder, VerticalAlignment=Enum.VerticalAlignment.Bottom}, v54);
+  local v55=0;
+  local function v56(v168, v169)v55=v55+1;
+    local v170=v20("Frame",{Size=UDim2.new(1, 0, 0, 42), BackgroundTransparency=1, LayoutOrder=v55}, v54);
+    local v171=v20("Frame",{Size=UDim2.new(1, 0, 1, 0), Position=UDim2.new(1, 30, 0, 0), BackgroundColor3=v16.panel}, v170);
+    v21(v171, 8);
+    v22(v171, v16.line, 1);
+    local v172=v20("Frame",{Size=UDim2.new(0, 3, 1,-14), Posisi=UDim2.new(0, 7, 0, 7), WarnaLatarBelakang3=v169 atau v16.acc}, v171);
+    v21(v172, 2);
+    v20("LabelTeks",{Ukuran=UDim2.new(1,-26, 1, 0), Posisi=UDim2.new(0, 18, 0, 0), BackgroundTransparency=1, Text=tostring(v168), TextColor3=v16.wh, TextSize=11, Font=v17.m, TextWrapped=true, TextXAlignment=v18}, v171);
+    v25(v171, 0.3,{Position=UDim2.new(0, 0, 0, 0)}, Enum.EasingStyle.Back);
+    task.delay(2.8, function()local v624=0;
+      while true do
+        if(v624==1)then
+          pcall(function()v170:Destroy();
+          end
+          );
+          break;
+        end
+        if(0==v624)then
+          v25(v171, 0.25,{Position=UDim2.new(1, 30, 0, 0)});
+          task.wait(0.3);
+          v624=1;
+        end
+      end
+    end
+    );
+  end
+  if(not pcall(function()v31.Parent=gethui();
+  end
+  )or not v31.Parent)then
+    if(not pcall(function()v31.Parent=game:GetService("CoreGui");
+    end
+    )or not v31.Parent)then
+      v31.Parent=v8:WaitForChild("PlayerGui");
+    end
+  end
+  getgenv().DG=v31;
+  local v58, v59, v60={}, 0, nil;
+  local function v61()local v174=0;
+    while true do
+      if(v174==0)then
+        v59=v59+1;
+        return v59;
+      end
+    end
+  end
+  local function v62(v175)local v176=0;
+    while true do
+      if(v176==0)then
+        if(v60==v175)then
+          return;
+        end
+        v60=v175;
+        v176=1;
+      end
+      if(v176==1)then
+        for v1356, v1357 in pairs(v58)do
+          local v1358=v1356==v175;
+          v25(v1357.btn, 0.18,{BackgroundTransparency=(v1358 and 0.35)or 1});
+          v25(v1357.ind, 0.18,{BackgroundTransparency=(v1358 dan 0)atau 1});
+          v25(v1357.tl, 0.18,{TextColor3=(v1358 dan v16.wh)atau v16.dm});
+          v1357.page.Visible=v1358;
+          jika v1358 maka local v1537=0;
+          selama benar lakukan jika(v1537==1)maka v1357.page.Position=UDim2.new(0, 14, 0, 0);
+          v25(v1357.page, 0.22,{Position=UDim2.new(0, 0, 0, 0)});
+          break;
+          akhir jika(v1537==0)maka v47.Text=v1356;
+          v48.Text=v1357.desc or "";
+          v1537=1;
+        end
+      end
+    end
+  end
+  break;
+end
+end
+end
+local function v63(v177, v178, v179)local v180=0;
+  local v181;
+  local v182;
+  local v183;
+  local v184;
+  while true do
+    if(v180==2)then
+      v184=v20("ScrollingFrame",{Size=UDim2.new(1, 0, 1, 0), BackgroundTransparency=1, ScrollBarThickness=3, ScrollBarImageColor3=v16.acc, CanvasSize=UDim2.new(0, 0, 0, 0), AutomaticCanvasSize=Enum.AutomaticSize.Y, Visible=false}, v49);
+      v20("UIListLayout",{Padding=UDim.new(0, 6), SortOrder=Enum.SortOrder.LayoutOrder}, v184);
+      v24(v184, 2, 0, 8, 8);
+      v180=3;
+    end
+    if(v180==3)then
+      v58[v177]={btn=v181, ind=v182, tl=v183, page=v184, desc=v179};
+      v181.Activated:Connect(function()v62(v177);
+      end
+      );
+      return v184;
+    end
+    if(v180==0)then
+      v181=v20("TextButton",{Size=UDim2.new(1, 0, 0, 26), BackgroundColor3=v16.card, BackgroundTransparency=1, Text="", AutoButtonColor=false, LayoutOrder=v61()}, v43);
+      v21(v181, 7);
+      v182=v20("Frame",{Size=UDim2.new(0, 3, 0, 14), Position=UDim2.new(0, 0, 0.5,-7), BackgroundColor3=v16.acc, BackgroundTransparency=1}, v181);
+      v180=1;
+    end
+    if(v180==1)then
+      v21(v182, 2);
+      v20("TextLabel",{Size=UDim2.new(0, 22, 1, 0), Position=UDim2.new(0, 8, 0, 0), BackgroundTransparency=1, Text=v178, TextSize=13, TextColor3=v16.wh, Font=v17.b}, v181);
+      v183=v20("TextLabel",{Size=UDim2.new(1,-36, 1, 0), Position=UDim2.new(0, 32, 0, 0), BackgroundTransparency=1, Text=v177, TextColor3=v16.dm, TextSize=11, Font=v17.b, TextXAlignment=v18}, v181);
+      v180=2;
+    end
+  end
+end
+local function v64(v185, v186)v20("TextLabel",{Size=UDim2.new(1, 0, 0, 22), BackgroundTransparency=1, Text=string.upper(v186), TextColor3=v16.acc2, TextSize=10, Font=v17.b, TextXAlignment=v18, TextYAlignment=Enum.TextYAlignment.Bottom, LayoutOrder=v61()}, v185);
+end
+local function v65(v187, v188, v189, v190)local v191=0;
+  local v192;
+  local v193;
+  local v194;
+  local v195;
+  local v196;
+  while true do
+    if(v191==1)lalu v21(v193, 10);
+    v194=v20("Frame",{Size=UDim2.new(0, 16, 0, 16), Position=UDim2.new(0,(v189 dan 22)atau 2, 0.5,-8), BackgroundColor3=v16.wh}, v193);
+    v21(v194, 8);
+    v195=v20("TextButton",{Size=UDim2.new(1, 0, 1, 0), BackgroundTransparency=1, Text=""}, v192);
+    v191=2;
+  end
+  if(v191==3)then
+    v196.set=function(v1360, v1361)v196.state=v1360;
+      v25(v193, 0.18,{BackgroundColor3=(v1360 and v16.ON)or v16.OFF});
+      v25(v194, 0.18,{Position=UDim2.new(0,(v1360 and 22)or 2, 0.5,-8)});
+      if(v190 and not v1361)then
+        task.spawn(v190, v1360);
+      end
+    end
+    v195.Activated:Connect(function()v196.set(not v196.state);
+    end
+    );
+    return v196;
+  end
+  if(v191==2)then
+    v21(v195, 8);
+    v26(v195);
+    v196={state=v189==true};
+    v196.get=function()return v196.state;
+    end
+    v191=3;
+  end
+  if(v191==0)then
+    v192=v20("Frame",{Size=UDim2.new(1, 0, 0, 36), BackgroundColor3=v16.card, LayoutOrder=v61()}, v187);
+    v21(v192, 8);
+    v20("TextLabel",{Size=UDim2.new(1,-66, 1, 0), Position=UDim2.new(0, 12, 0, 0), BackgroundTransparency=1, Text=v188, TextColor3=v16.wh, TextSize=12, Font=v17.r, TextXAlignment=v18, TextTruncate=Enum.TextTruncate.AtEnd}, v192);
+    v193=v20("Frame",{Size=UDim2.new(0, 40, 0, 20), Position=UDim2.new(1,-52, 0.5,-10), BackgroundColor3=(v189 and v16.ON)or v16.OFF}, v192);
+    v191=1;
+  end
+end
+end
+local function v66(v197, v198, v199, v200)local v201=0;
+  local v202;
+  local v203;
+  local v204;
+  while true do
+    if(v201==3)then
+      if v204 then
+        local v1462=0;
+        while true do
+          if(v1462==0)then
+            v203.Focused:Connect(function()v25(v204, 0.15,{Color=v16.acc});
+            end
+            );
+            v203.FocusLost:Connect(function()v25(v204, 0.15,{Color=v16.line});
+            end
+            );
+            break;
+          end
+        end
+      end
+      return v203;
+    end
+    if(v201==0)then
+      v202=v20("Frame",{Size=(v200 and UDim2.new(1, 0, 1, 0))or UDim2.new(0.5,-3, 1, 0), BackgroundColor3=v16.card}, v197);
+      v21(v202, 8);
+      v201=1;
+    end
+    if(v201==2)then
+      v21(v203, 6);
+      v204=v22(v203, v16.line, 1);
+      v201=3;
+    end
+    if(v201==1)then
+      v20("TextLabel",{Size=UDim2.new(1,-16, 0, 14), Position=UDim2.new(0, 8, 0, 5), BackgroundTransparency=1, Text=v198, TextColor3=v16.dm, TextSize=10, Font=v17.m, TextXAlignment=v18, TextTruncate=Enum.TextTruncate.AtEnd}, v202);
+      v203=v20("TextBox",{Size=UDim2.new(1,-16, 0, 22), Position=UDim2.new(0, 8, 0, 21), BackgroundColor3=v16.bg, Text=tostring(v199), TextColor3=v16.wh, TextSize=12, Font=v17.b, ClearTextOnFocus=false}, v202);
+      v201=2;
+      akhir akhir akhir fungsi lokal v67(v205, v206, v207, v208, v209)lokal v210=v20("Frame",{Size=UDim2.new(1, 0, 0, 50), BackgroundTransparency=1, LayoutOrder=v61()}, v205);
+      v20("UIListLayout",{FillDirection=Enum.FillDirection.Horizontal, Padding=UDim.new(0, 6), SortOrder=Enum.SortOrder.LayoutOrder}, v210);
+      lokal v211=v66(v210, v206, v207, v208==nil);
+      lokal v212=(v208 dan v66(v210, v208, v209))atau nil;
+      return v211, v212;
+    end
+    local function v68(v213, v214, v215, v216)local v217=v20("TextButton",{Size=UDim2.new(1, 0, 0, 34), BackgroundColor3=v216 or v16.acc, Text=v214, AutoButtonColor=false, TextColor3=v16.wh, TextSize=12, Font=v17.b, LayoutOrder=v61()}, v213);
+      v21(v217, 8);
+      v26(v217);
+      v217.Activated:Connect(function()v25(v217, 0.08,{TextTransparency=0.4});
+        task.delay(0.1, function()v25(v217, 0.12,{TextTransparency=0});
+        end
+        );
+        v215();
+      end
+      );
+      return v217;
+    end
+    local function v69(v218, v219)v20("TextLabel",{Size=UDim2.new(1, 0, 0, 0), AutomaticSize=Enum.AutomaticSize.Y, BackgroundTransparency=1, Text=v219, TextColor3=v16.dm, TextSize=10, Font=v17.r, TextWrapped=true, TextXAlignment=v18, TextYAlignment=Enum.TextYAlignment.Top, LayoutOrder=v61()}, v218);
+    end
+    local function v70(v220, v221, v222)local v223=0;
+      local v224;
+      local v225;
+      local v226;
+      local v227;
+      while true do
+        if(v223==1)then
+          v27[#v27+1]=v6.InputChanged:Connect(function(v1363)if(v224 and((v1363.UserInputType==Enum.UserInputType.MouseMovement)or(v1363.UserInputType==Enum.UserInputType.Touch)))then
+            local v1538=v1363.Position-v225;
+            jika(v1538.Magnitude>4)maka v227=true;
+            akhir v221.Position=UDim2.new(v226.X.Scale, v226.X.Offset+v1538.X, v226.Y.Scale, v226.Y.Offset+v1538.Y);
+            akhir akhir);
+            break;
+            akhir jika(v223==0)maka v224, v225, v226, v227=false, nil, nil, false;
+            v220.InputBegan:Connect(function(v1364)jika((v1364.UserInputType==Enum.UserInputType.MouseButton1)atau(v1364.UserInputType==Enum.UserInputType.Touch))maka v224, v227=true, false;
+              v225, v226=v1364.Position, v221.Position;
+              v1364.Changed:Connect(function()if(v1364.UserInputState==Enum.UserInputState.End)then
+                if(v224 and not v227 and v222)then
+                  v222();
+                end
+                v224=false;
+              end
+            end
+            );
+          end
+        end
+        );
+        v223=1;
+      end
+    end
+  end
+  local v71=nil;
+  local function v72()return v4:FindFirstChild("ByteNetReliable"), v4:FindFirstChild("WorldRemotes");
+  end
+  local function v73()local v228=0;
+    local v229;
+    local v230;
+    local v231;
+    local v232;
+    local v233;
+    while true do
+      if(v228==2)then
+        v232=v230 and v230:FindFirstChild("DropItem");
+        v233=v230 and v230:FindFirstChild("Recycle");
+        v228=3;
+      end
+      if(v228==0)then
+        if not v71 then
+          for v1542, v1543 in ipairs(v4:GetDescendants())do
+            if((v1543.Name=="MoveTo")and v1543:IsA("RemoteEvent")))then
+              v71=v1543;
+              break;
+            end
+          end
+        end
+        v229=v4:FindFirstChild("ByteNetReliable");
+        v228=1;
+      end
+      if(3==v228)then
+        return v229, v230, v231, v232, v233, v71;
+      end
+      if(v228==1)then
+        v230=v4:FindFirstChild("WorldRemotes");
+        v231=v230 and v230:FindFirstChild("SetTile");
+        v228=2;
+      end
+    end
+  end
+  local function v74(v234, v235, v236)local v237=buffer.create(10);
+    buffer.writeu8(v237, 0, 7);
+    buffer.writef32(v237, 1, v236);
+    buffer.writeu8(v237, 5, v234);
+    buffer.writef32(v237, 6, v235);
+    return v237;
+  end
+  local v75, v76=nil, nil;
+  local function v77(v238)local v239=0;
+    local v240;
+    local v241;
+    while true do
+      if(1==v239)then
+        if not getgc then
+          return nil, nil;
+        end
+        v240, v241=pcall(getgc, true);
+        v239=2;
+      end
+      if(v239==3)then
+        return v75, v76;
+      end
+      if(v239==0)then
+        if(not v238 and v75 and(type(rawget(v75, "slots"))=="table"))then
+          return v75, v76;
+        end
+        v75, v76=nil, nil;
+        v239=1;
+      end
+      if(2==v239)then
+        if(not v240 or(type(v241)~="table"))then
+          return nil, nil;
+        end
+        for v1365, v1366 in ipairs(v241)do
+          if(type(v1366)=="table")then
+            if(rawget(v1366, "capacity")and(type(rawget(v1366, "slots"))=="table"))then
+              local v1693=rawget(v1366, "slots");
+              if((rawget(v1366, "selected")~=nil)atau(rawget(v1693, 1)~=nil))maka v75=v1366;
+            end
+          end
+          jika(bukan v76 dan(type(rawget(v1366, "refresh"))=="function")dan(rawget(v1366, "screen")~=nil))maka v76=v1366;
+          end
+        end
+      end
+      v239=3;
+    end
+  end
+end
+local function v78(v242, v243)local v244=v77(v243);
+  if not v244 then
+    v244=v77(true);
+  end
+  jika not v244 then
+    return nil;
+  end
+  local v245=rawget(v244, "slots");
+  if(type(v245)~="table")then
+    return nil;
+  end
+  local v246=0;
+  for v625, v626 in pairs(v245)do
+    if((type(v626)=="table")and(tonumber(rawget(v626, "id"))==v242))then
+      v246=v246+(tonumber(rawget(v626, "n"))or 0);
+    end
+  end
+  return v246;
+end
+local function v79(v247, v248)local v249=0;
+  while true do
+    if(v249==0)then
+      v248=tonumber(v248)or 1;
+      if(v248<=0)then
+        return;
+      end
+      v249=1;
+    end
+    if(v249==1)then
+      pcall(function()local v1367, v1368=v77(false);
+        if not v1367 then
+          v1367, v1368=v77(true);
+        end
+        if not v1367 then
+          return;
+        end
+        local v1369=rawget(v1367, "slots");
+        if(type(v1369)~="table")then
+          return;
+        end
+        local v1370=v248;
+        for v1463, v1464 in pairs(v1369)do
+          if((type(v1464)=="table")and(tonumber(rawget(v1464, "id"))==v247))then
+            local v1629=tonumber(rawget(v1464, "n"))or 0;
+            if(v1629>v1370)then
+              rawset(v1464, "n", v1629-v1370);
+              v1370=0;
+              break;
+            else
+              v1370=v1370-v1629;
+              v1369[v1463]=nil;
+              if(v1370<=0)then
+                break;
+              end
+            end
+          end
+        end
+        if(v1368 and(type(rawget(v1368, "refresh"))=="function"))then
+          task.spawn(rawget(v1368, "refresh"));
+        end
+        local v1371=v4:FindFirstChild("WorldRemotes");
+        local v1372=v1371 and v1371:FindFirstChild("SaveInventory");
+        if v1372 then
+          pcall(function()v1372:FireServer(v1369);
+          end
+          );
+        end
+      end
+      );
+      break;
+    end
+  end
+end
+local v80=false;
+local v81=nil;
+local v82=nil;
+local v83=nil;
+local v84=nil;
+local v85=nil;
+local v86=nil;
+local v87=nil;
+local v88=nil;
+local v89=nil;
+local v90=nil;
+local v91=nil;
+local v92=false;
+local v93=v20("Frame",{Name="SmokeFXLayer", Size=UDim2.new(1, 0, 1, 0), BackgroundTransparency=1, Active=false}, v31);
+local function v94(v250)local v251=0;
+  local v252;
+  local v253;
+  while true do
+    if(v251==1)then
+      v253=rawget(v250, "playAt");
+      if(type(v252)=="function")then
+        rawset(v250, "_origPlay", v252);
+        rawset(v250, "play", function(v1544, ...)local v1545=0;
+          while true do
+            if(v1545==0)then
+              if v92 then
+                return;
+              end
+              return v252(v1544, ...);
+            end
+          end
+        end
+        );
+      end
+      v251=2;
+    end
+    if(v251==2)then
+      if(type(v253)=="function")then
+        rawset(v250, "_origPlayAt", v253);
+        rawset(v250, "playAt", function(v1546, ...)if v92 then
+          return;
+        end
+        return v253(v1546, ...);
+      end
+      );
+    end
+    rawset(v250, "_fian792MuteHooked", true);
+    break;
+  end
+  if(v251==0)then
+    if((type(v250)~="table")atau rawget(v250, "_fian792MuteHooked"))then
+      return;
+    end
+    v252=rawget(v250, "play");
+    v251=1;
+  end
+end
+end
+local function v95()local v254=0;
+  while true do
+    if(v254==0)then
+      v92=false;
+      if((type(v89)=="table")and rawget(v89, "_fian792MuteHooked"))then
+        if rawget(v89, "_origPlay")then
+          rawset(v89, "play", rawget(v89, "_origPlay"));
+        end
+        if rawget(v89, "_origPlayAt")then
+          rawset(v89, "playAt", rawget(v89, "_origPlayAt"));
+        end
+        rawset(v89, "_fian792MuteHooked", nil);
+      end
+      break;
+    end
+  end
+end
+local function v96(v255)jika(bukan v255 dan v80 dan v81)maka kembalikan v81, v87;
+  akhir v80=true;
+  pcall(function()local v627=v4:FindFirstChild("WorldRemotes");
+    local v628=v627 dan v627:FindFirstChild("TileChanged");
+    jika(v628 dan getconnections)maka untuk v1373, v1374 dalam ipairs(getconnections(v628.OnClientEvent))lakukan jika v1374.Function maka local v1547=0;
+    local v1548;
+    local v1549;
+    selama benar lakukan jika(v1547==0)maka v1548, v1549=pcall(debug.getupvalues, v1374.Function);
+    jika(v1548 dan(type(v1549)=="table"))maka lokal v1814=0;
+    selama benar lakukan jika(v1814==0)maka jika((type(v1549[1])=="table")dan v1549[1].laserAt)maka v87=v1549[1];
+    akhir jika(type(v1549[2])=="function")maka v81=v1549[2];
+      akhir break;
+      akhir akhir akhir break;
+      akhir akhir akhir akhir akhir akhir);
+      jika getgc maka pcall(function()untuk v1375, v1376 dalam ipairs(getgc(true))lakukan jika(type(v1376)=="function")maka lokal v1550, v1551, v1552, v1553=pcall(function()local v1630, v1631, v1632=debug.info(v1376, "sln");
+        return v1630, v1631, tostring(v1632 or "");
+      end
+      );
+      if(v1550 and v1551 and tostring(v1551):find("GameGui.Game")))then
+        if((v1553=="setTile")and not v81)then
+          v81=v1376;
+        elseif(v1553=="remoteHit")then
+          v82=v1376;
+        elseif(v1553=="newCrack")then
+          v83=v1376;
+        elseif(v1553=="hit")then
+          local v1889=0;
+          local v1890;
+          local v1891;
+          while true do
+            if(v1889==0)then
+              v84=v1376;
+              v1890, v1891=pcall(debug.getupvalues, v1376);
+              v1889=1;
+            end
+            if(1==v1889)then
+              if(v1890 and(type(v1891)=="table"))then
+                local v1907=0;
+                while true do
+                  if(v1907==0)then
+                    if((type(v1891[3])=="table")and(type(rawget(v1891[3], "play")))=="function"))then
+                      v89=v1891[3];
+                    end
+                    if((type(v1891[13])=="table")and(rawget(v1891[13], "live")~=nil))then
+                      v90=v1891[13];
+                    end
+                    v1907=1;
+                  end
+                  if(v1907==1)then
+                    for v1914, v1915 in pairs(v1891)do
+                      if((type(v1915)=="table")and(type(rawget(v1915, "fg"))=="table")and(type(rawget(v1915, "w"))=="number"))then
+                        v91=v1915;
+                      end
+                    end
+                    break;
+                  end
+                end
+              end
+              break;
+            end
+          end
+        elseif(v1553=="act")then
+          v85=v1376;
+          local v1895, v1896=pcall(debug.getupvalues, v1376);
+          jika(v1895 dan(tipe(v1896)=="table"))maka lokal v1904=0;
+          selama benar lakukan jika(v1904==0)maka jika(bukan v89 dan(tipe(v1896[11])=="table")dan(tipe(rawget(v1896[11], "play"))=="function"))maka v89=v1896[11];
+            akhir jika(bukan v90 dan(tipe(v1896[23])=="table")dan(rawget(v1896[23], "live")~=nil))maka v90=v1896[23];
+            akhir v1904=1;
+            akhir jika(v1904==1)kemudian untuk v1912, v1913 dalam pasangan(v1896)lakukan jika((tipe(v1913)=="table")dan(tipe(rawget(v1913, "fg"))=="table")dan(tipe(rawget(v1913, "w"))=="number"))maka v91=v1913;
+            akhir akhir break;
+            akhir akhir akhir jika(v1553=="dropList")maka v86=v1376;
+            jika((v1553=="state")dan bukan v88)maka lokal v1909=0;
+            lokal v1910;
+            lokal v1911;
+            selama benar lakukan jika(0==v1909)maka v1910, v1911=pcall(debug.getupvalues, v1376);
+            jika(v1910 dan(type(v1911)=="table")and(type(v1911[10])=="table")and(v1911[10].facing~=nil))then
+              v88=v1911[10];
+            end
+            break;
+          end
+        end
+      end
+    end
+  elseif(type(v1376)=="table")then
+    if(not v89 and(type(rawget(v1376, "play"))=="function")and(type(rawget(v1376, "playAt"))=="function"))then
+      v89=v1376;
+    end
+    if(not v91 and(type(rawget(v1376, "fg"))=="table")and(type(rawget(v1376, "w"))=="number"))then
+      v91=v1376;
+    end
+  end
+end
+end
+);
+end
+if v89 then
+  v94(v89);
+end
+return v81, v87;
+akhir fungsi lokal v97(v256, v257)jika bukan v91 maka kembalikan nil;
+akhir lokal v258=rawget(v91, "fg");
+lokal v259=rawget(v91, "w");
+jika((tipe(v258)=="table")dan(tipe(v259)=="number")dan(v259>0))maka lokal v1091=0;
+lokal v1092;
+selama benar lakukan jika(v1091==1)maka jika(tipe(v1092)=="table")maka kembalikan ke number(rawget(v1092, "id")atau 0;
+akhir break;
+akhir jika(v1091==0)maka v1092=v258[(v257*v259)+v256+1];
+jika(tipe(v1092)=="angka")maka kembalikan v1092;
+akhir v1091=1;
+akhir akhir akhir kembalikan nil;
+akhir fungsi lokal v98(v260, v261, v262, v263, v264)lokal v265=0;
+lokal v266;
+selama benar lakukan jika(v265==0)maka v266=v96(false);
+jika bukan v266 maka v266=v96(true);
+akhir v265=1;
+akhir jika(v265==1)maka jika v266 maka jika(v264~=nil)maka pcall(v266, v260, v261, v262, v263, v264);
+else
+  pcall(v266, v260, v261, v262, v263);
+end
+return true;
+end
+return false;
+end
+end
+end
+local function v99()if v90 then
+  pcall(function()local v1265=0;
+    local v1266;
+    local v1267;
+    while true do
+      if(v1265==0)then
+        v1266=rawget(v90, "live");
+        if(type(v1266)=="table")then
+          for v1733, v1734 in pairs(v1266)do
+            if((type(v1734)=="table")and v1734.l and(typeof(v1734.l)=="Instance"))then
+              v1734.l.ImageTransparency=1;
+            elseif((typeof(v1734)=="Instance")dan v1734:Jika(v1267 dan(typeof(v1267)=="Instance"))maka v1734.ImageTransparency=1;
+            end
+          end
+        end
+        v1265=1;
+      end
+      jika(1==v1265)maka v1267=rawget(v90, "parent");
+      jika(v1267 dan(typeof(v1267)=="Instance"))maka untuk v1735, v1736 dalam ipairs(v1267:GetChildren())lakukan jika((v1736.Name=="Crack")dan v1736:IsA("ImageLabel"))maka v1736.ImageTransparency=1;
+    end
+  end
+end
+break;
+end
+end
+end
+);
+end
+end
+local function v100(v267, v268)local v269=0;
+  local v270;
+  local v271;
+  local v272;
+  local v273;
+  while true do
+    if(v269==1)then
+      v271=(workspace.CurrentCamera and workspace.CurrentCamera.ViewportSize)or Vector2.new(1280, 720);
+      v272=v13.x or(v267+0.5);
+      v269=2;
+    end
+    if(v269==2)then
+      v273=(v13.y or(v268+0.999))-0.5;
+      return(v271.X*0.5)+(((v267+0.5)-v272)*64),(v271.Y*0.5)+(((v268+0.5)-v273)*64), 64;
+    end
+    if(0==v269)then
+      v270=v85 or v84;
+      if v270 then
+        local v1466=0;
+        local v1467;
+        local v1468;
+        while true do
+          if(v1466==0)then
+            v1467, v1468=pcall(debug.getupvalues, v270);
+            if(v1467 and(type(v1468)=="table"))then
+              local v1776=0;
+              local v1777;
+              local v1778;
+              local v1779;
+              while true do
+                if(v1776==0)then
+                  v1777=((v270==v85)and v1468[2])or v1468[27];
+                  v1778=((v270==v85)and v1468[4])or v1468[28];
+                  v1776=1;
+                end
+                if(1==v1776)then
+                  v1779=((v270==v85)and v1468[5])or v1468[29];
+                  if((type(v1777)=="number")and(type(v1778)=="number")and(type(v1779)=="number")))then
+                    return((v267+0.5)-v1777)*v1778,((v268+0.5)-v1779)*v1778, v1778;
+                  end
+                  break;
+                end
+              end
+            end
+            break;
+          end
+        end
+      end
+      v269=1;
+    end
+  end
+end
+local function v101(v274, v275, v276)if not(v93 and v93.Parent)then
+  return;
+end
+pcall(function()local v629, v630, v631=v100(v274, v275);
+  local v632=(v276 and 5)or 3;
+  local v633=math.max(math.floor(v631*((v276 and 0.45)or 0.34)), 16);
+  untuk v1093=1, v632 lakukan lokal v1094=0;
+  lokal v1095;
+  lokal v1096;
+  lokal v1097;
+  lokal v1098;
+  lokal v1099;
+  lokal v1100;
+  lokal v1101;
+  lokal v1102;
+  lokal v1103;
+  lokal v1104;
+  selama benar lakukan jika(v1094==1)maka v1098=(math.sin(v1095)*v1096)-math.random(4, 10);
+  v1099=v633+math.random(-3, 4);
+  v1100=math.floor(v1099*((v276 dan 1.7)atau 1.4));
+  v1094=2;
+end
+if(v1094==4)then
+  v1102.BorderSizePixel=0;
+  v1102.Size=UDim2.fromOffset(v1099, v1099);
+  v1102.Position=UDim2.fromOffset(v629, v630);
+  v1094=5;
+end
+if(v1094==6)then
+  v1103.CornerRadius=UDim.new(1, 0);
+  v1103.Parent=v1102;
+  v1104=(v276 dan 0.3)atau 0.22;
+  v1094=7;
+end
+if(v1094==3)maka v1102.AnchorPoint=Vector2.new(0.5, 0.5);
+v1102.BackgroundColor3=Color3.fromRGB(v1101, v1101, v1101+5);
+v1102.BackgroundTransparency=(v276 dan 0.25)atau 0.35;
+v1094=4;
+end
+if(0==v1094)then
+  v1095=((v1093/v632)*math.pi*2)+(math.random()*0.6);
+  v1096=math.random(math.floor(v631*0.22), math.floor(v631*((v276 and 0.6)or 0.42)));
+  v1097=math.cos(v1095)*v1096;
+  v1094=1;
+end
+if(v1094==5)then
+  v1102.ZIndex=999990;
+  v1102.Parent=v93;
+  v1103=Instance.new("UICorner");
+  v1094=6;
+end
+if(v1094==7)then
+  v5:Create(v1102, TweenInfo.new(v1104, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size=UDim2.fromOffset(v1100, v1100), Position=UDim2.fromOffset(v629+v1097, v630+v1098), BackgroundTransparency=1}):Play();
+  task.delay(v1104+0.04, function()if(v1102 and v1102.Parent)then
+    v1102:Destroy();
+  end
+end
+);
+break;
+end
+if(2==v1094)then
+  v1101=math.random(220, 245);
+  v1102=Instance.new("Frame");
+  v1102.Name="SmokePuff";
+  v1094=3;
+end
+end
+end
+end
+);
+end
+local function v102(v277, v278, v279, v280)local v281=0;
+  while true do
+    if(v281==0)then
+      v96(false);
+      v99();
+      v281=1;
+    end
+    if(1==v281)then
+      v101(v277, v278, v279==v280);
+      if(v88 and v13.x)then
+        pcall(function()local v1554=0;
+          while true do
+            if(v1554==2)then
+              v88.t=os.clock();
+              break;
+            end
+            if(v1554==0)then
+              v88.x=v277;
+              v88.y=v278;
+              v1554=1;
+            end
+            if(1==v1554)then
+              v88.facing=(((v277+0.5)>=v13.x)and 1)or-1;
+              v88.kind="punch";
+              v1554=2;
+            end
+          end
+        end
+        );
+      end
+      break;
+    end
+  end
+end
+local v103=nil;
+local function v104(v282)local v283=0;
+  local v284;
+  while true do
+    if(v283==0)maka jika rawget(v282, "pending")maka kembalikan true;
+  end
+  jika rawget(v282, "picked")maka kembalikan true;
+end
+v283=1;
+end
+jika(1==v283)maka jika(rawget(v282, "from")~=nil)maka kembalikan true;
+end
+v284=rawget(v282, "frame");
+v283=2;
+end
+jika(v283==2)maka jika((v284~=nil)dan(typeof(v284)=="Instance")dan(v284.Parent==nil))maka kembalikan true;
+end
+kembalikan false;
+end
+end
+end
+fungsi lokal v105(v285)lokal v286=0;
+lokal v287;
+lokal v288;
+lokal v289;
+lokal v290;
+while true lakukan jika(v286==4)maka kembalikan false;
+akhir jika(v286==1)maka v287=rawget(v285, "x")atau rawget(v285, "X")atau rawget(v285, "px");
+v288=rawget(v285, "y")atau rawget(v285, "Y")atau rawget(v285, "py");
+v286=2;
+akhir jika(v286==2)maka jika((type(v287)=="number")dan(type(v288)=="number")dan(v287>=0)dan(v287<=200)dan(v288>=0)dan(v288<=200))maka jika((rawget(v285, "id")~=nil)atau(rawget(v285, "item")~=nil)atau(rawget(v285, "itemId")~=nil)atau(rawget(v285, "count")~=nil)atau(rawget(v285, "n")~=nil)atau(rawget(v285, "uid")~=nil))maka jika((rawget(v285, "capacity")==nil)dan(rawget(v285, "slots")==nil)dan(rawget(v285, "fg")==nil))maka kembalikan true;
+end
+end
+end
+v289=rawget(v285, "pos")atau rawget(v285, "position")atau rawget(v285, "p");
+v286=3;
+akhir jika(v286==3)maka v290=typeof(v289);
+jika(((v290=="Vector2")atau(v290=="Vector3"))dan(v289.X>=0)dan(v289.X<=200)dan(v289.Y>=0)dan(v289.Y<=200))maka jika((rawget(v285, "id")~=nil)atau(rawget(v285, "item")~=nil)atau(rawget(v285, "count")~=nil)atau(rawget(v285, "n")~=nil))maka kembalikan benar;
+akhir akhir v286=4;
+akhir jika(v286==0)maka jika(tipe(v285)~="table")maka kembalikan false;
+akhir jika v104(v285)maka kembalikan false;
+akhir v286=1;
+akhir akhir akhir fungsi lokal v106(v291)lokal v292=0;
+lokal v293;
+lokal v294;
+lokal v295;
+lokal v296;
+selama benar lakukan jika(1==v292)maka jika((tipe(v293)=="number")dan(tipe(v294)=="number"))maka kembalikan v293, v294;
+akhir v295=rawget(v291, "pos")atau rawget(v291, "position")atau rawget(v291, "p");
+v292=2;
+akhir jika(v292==0)then
+  v293=rawget(v291, "x")or rawget(v291, "X")or rawget(v291, "px");
+  v294=rawget(v291, "y")or rawget(v291, "Y")or rawget(v291, "py");
+  v292=1;
+end
+if(v292==2)then
+  v296=typeof(v295);
+  if((v296=="Vector2")or(v296=="Vector3")))then
+    return v295.X, v295.Y;
+  end
+  v292=3;
+end
+if(v292==3)then
+  return nil, nil;
+end
+end
+end
+local function v107(v297, v298, v299)local v300=0;
+  local v301;
+  local v302;
+  local v303;
+  while true do
+    if(v300==2)then
+      function v303(v1377)local v1378=0;
+        while true do
+          if(v1378==0)then
+            if(type(v1377)~="table")then
+              return;
+            end
+            for v1694, v1695 in pairs(v1377)do
+              if((type(v1695)=="table")and not v302[v1695]and v105(v1695))then
+                local v1780=0;
+                local v1781;
+                local v1782;
+                while true do
+                  if(v1780==0)then
+                    v1781, v1782=v106(v1695);
+                    if(v1781 and v1782 and(math.abs(v1781-(v297+0.5))<=v299)dan(math.abs(v1782-(v298+0.5))<=v299))maka lokal v1875=0;
+                    selama benar lakukan jika(0==v1875)maka v302[v1695]=true;
+                    v301[#v301+1]={raw=v1695, x=v1781, y=v1782, cx=math.floor(v1781), cy=math.floor(v1782-0.001), id=rawget(v1695, "id")atau rawget(v1695, "item")atau rawget(v1695, "itemId")};
+                    break;
+                  end
+                end
+              end
+              break;
+            end
+          end
+        end
+      end
+      break;
+    end
+  end
+end
+v96(false);
+v300=3;
+end
+if(v300==4)then
+  if((#v301==0)and getgc)then
+    local v1480=0;
+    local v1481;
+    local v1482;
+    while true do
+      if(v1480==0)then
+        v1481, v1482=pcall(getgc, true);
+        if(v1481 and(type(v1482)=="table"))then
+          for v1817, v1818 in ipairs(v1482)do
+            if(type(v1818)=="table")then
+              local v1853=0;
+              local v1854;
+              while true do
+                if(v1853==0)then
+                  v1854=rawget(v1818, "drops")or rawget(v1818, "dropList";
+                  jika(tipe(v1854)=="tabel")maka lokal v1899=0;
+                  lokal v1900;
+                  selama benar lakukan jika(v1899==0)maka v1900=#v301;
+                  v303(v1854);
+                  v1899=1;
+                  akhir jika(v1899==1)maka jika(#v301>v1900)maka v103=v1854;
+                  akhir break;
+                  akhir akhir akhir break;
+                  akhir akhir akhir akhir akhir break;
+                  akhir akhir akhir kembalikan v301;
+                  akhir jika(v300==1)maka v302={};
+                  v303=nil;
+                  v300=2;
+                  akhir jika(0==v300)maka v299=v299 atau 4.5;
+                  v301={};
+                  v300=1;
+                  akhir jika(v300==3)maka jika v86 maka lokal v1483=0;
+                  lokal v1484;
+                  lokal v1485;
+                  selama benar lakukan jika(v1483==0)maka v1484, v1485=pcall(v86);
+                  jika(v1484 dan(tipe(v1485)=="table"))maka lokal v1783=0;
+                  selama benar lakukan jika(v1783==0)maka v303(v1485);
+                  kembalikan v301;
+                  akhir akhir jika tidak lokal v1784, v1785=pcall(debug.getupvalues, v86);
+                  jika(v1784 dan(tipe(v1785)=="table"))maka untuk v1855, v1856 dalam pasangan(v1785)lakukan jika(type(v1856)=="table")then
+                    local v1876=0;
+                    while true do
+                      if(v1876==0)then
+                        v303(v1856);
+                        if(#v301>0)then
+                          return v301;
+                        end
+                        break;
+                      end
+                    end
+                  end
+                end
+              end
+            end
+            break;
+          end
+        end
+      end
+      if((#v301==0)and v103)then
+        v303(v103);
+      end
+      v300=4;
+    end
+  end
+end
+local v108, v109=Enum.KeyCode.A, Enum.KeyCode.D;
+local v110=nil;
+local function v111(v304, v305)pcall(function()v7:SendKeyEvent(v305, v304, false, game);
+end
+);
+end
+local function v112()v110=nil;
+  v111(v108, false);
+  v111(v109, false);
+end
+local function v113(v306)if(v110~=v306)then
+  v112();
+  v111(v306, true);
+  v110=v306;
+end
+end
+local function v114()local v307=0;
+  while true do
+    if(v307==0)then
+      v111(Enum.KeyCode.Space, true);
+      task.wait(0.12);
+      v307=1;
+    end
+    if(v307==1)then
+      v111(Enum.KeyCode.Space, false);
+      break;
+    end
+  end
+end
+local function v115(v308, v309)return math.floor(v308), math.floor(v309-0.001);
+end
+local function v116(v310, v311)local v312=0;
+  local v313;
+  local v314;
+  while true do
+    if(v312==0)then
+      v313, v313, v313, v313, v313, v314=v73();
+      if v314 then
+        pcall(firesignal, v314.OnClientEvent, v310, v311);
+      end
+      v312=1;
+    end
+    if(v312==1)then
+      if v14 then
+        pcall(function()local v1555=buffer.create(9);
+          buffer.writeu8(v1555, 0, 2);
+          buffer.writef32(v1555, 1, v311);
+          buffer.writef32(v1555, 5, v310);
+          v14:FireServer(v1555);
+        end
+        );
+      end
+      v13.x, v13.y=v310, v311;
+      break;
+    end
+  end
+end
+local function v117(v315, v316, v317, v318, v319)v112();
+  v318=v318 or 0.18;
+  v116(v315, v316);
+  local v320=os.clock();
+  local v321=v320;
+  while not(v319 and v319())and((os.clock()-v320)<v318)do
+    if((type(v317)=="table")and(#v317>0))then
+      local v1270=true;
+      local v1271=nil;
+      for v1379, v1380 in ipairs(v317)do
+        if not v104(v1380)then
+          v1270=false;
+          v1271=v1380;
+          break;
+        end
+      end
+      if v1270 then
+        break;
+      end
+      if((os.clock()-v321)>=0.05)then
+        v321=os.clock();
+        local v1486, v1487=v106(v1271);
+        if(v1486 and v1487)then
+          v116(v1486, v1487);
+        else
+          v116(v315, v316);
+        end
+      end
+    elseif((os.clock()-v321)>=0.06)then
+      v321=os.clock();
+      v116(v315, v316);
+    end
+    task.wait(0.03);
+  end
+end
+local function v118(v322, v323, v324, v325)v117(v322+0.5, v323+0.999, nil, v324, v325);
+  akhir fungsi lokal v119(v326, v327, v328)lokal v329=0;
+  lokal v330;
+  lokal v331;
+  selama benar lakukan jika(1==v329)maka untuk v1381=1, 3 lakukan jika(v328 dan v328())maka berhenti;
+  akhir v116(v330, v331);
+  tugas.tunggu(0.06);
+  akhir berhenti;
+  akhir jika(v329==0)maka v112();
+  v330, v331=v326+0.5, v327+0.999;
+  v329=1;
+  akhir akhir akhir fungsi lokal v120(v332, v333, v334, v335)v335=v335 atau 35;
+  local v336=os.clock();
+  local v337, v338, v339=v13.x atau 0, v13.y atau 0, os.clock();
+  while not(v334 and v334())and((os.clock()-v336)<v335)do
+    if not(v13.x and v13.y)then
+      task.wait(0.05);
+      continue;
+    end
+    local v634, v635=v115(v13.x, v13.y);
+    local v636=(v332+0.5)-v13.x;
+    if((v634==v332)dan(v635==v333)dan(math.abs(v636)<0.28))maka v112();
+    task.wait(0.08);
+    local v1272, v1273=v115(v13.x, v13.y);
+    if((v1272==v332)dan(v1273==v333))maka kembalikan true;
+  end
+end
+jika(math.abs(v636)>0.12)maka v113(((v636>0)dan v109)atau v108);
+else
+  v112();
+end
+jika((v635>v333)dan(math.abs(v636)<1.5))maka v114();
+end
+task.wait(0.03);
+if((math.abs(v13.x-v337)+math.abs(v13.y-v338))>0.03)then
+  v337, v338, v339=v13.x, v13.y, os.clock();
+elseif((os.clock()-v339)>0.55)then
+  v114();
+  v339=os.clock();
+end
+end
+v112();
+if not(v13.x and v13.y)then
+  return false;
+end
+local v340, v341=v115(v13.x, v13.y);
+return(v340==v332)and(v341==v333);
+end
+(function()local v342=v63("Farm", "🌱", "Farm 5x5 v3.0 • Auto Refill • Asap Puff • Collect Senyap");
+  v64(v342, "Area Pemilih 5x5 (Klik untuk Pilih)");
+  local v343=v20("Bingkai",{Size=UDim2.new(1, 0, 0, 268), BackgroundColor3=v16.card, LayoutOrder=v61()}, v342);
+  v21(v343, 10);
+  local v344=v20("Label Teks",{Size=UDim2.new(1,-20, 0, 20), Position=UDim2.new(0, 10, 0, 6), BackgroundTransparency=1, Text="Terpilih: 0 tile (Klik kotak 1-25 untuk memilih)", TextColor3=v16.acc2, TextSize=11, Font=v17.b, TextXAlignment=Enum.TextXAlignment.Center}, v343);
+  local v345=v20("Frame",{Size=UDim2.new(0, 200, 0, 200), Position=UDim2.new(0.5,-100, 0, 30), BackgroundTransparency=1}, v343);
+  local v346={};
+  local v347={};
+  local v348={};
+  local function v349()local v637=0;
+    while true do
+      if(v637==0)then
+        for v1488, v1489 in ipairs(v348)do
+          if v347[v1488]Kemudian v1489.btn.BackgroundColor3=v16.acc;
+          v1489.btn.TextColor3=v16.wh;
+        elseif(v1488==13)then
+          local v1742=0;
+          while true do
+            if(v1742==0)then
+              v1489.btn.BackgroundColor3=v16.card2;
+              v1489.btn.TextColor3=v16.YEL;
+              break;
+            end
+          end
+        else
+          v1489.btn.BackgroundColor3=v16.bg;
+          v1489.btn.TextColor3=v16.dm;
+        end
+      end
+      v344.Text=string.format("Terpilih: %d tile", #v346);
+      break;
+    end
+  end
+end
+local v350=0;
+for v638=0, 4 do
+  for v1105=0, 4 lakukan v350=v350+1;
+  local v1106=v1105-2;
+  local v1107=v638-2;
+  local v1108=v350==13;
+  local v1109=v20("TextButton",{Size=UDim2.new(0, 36, 0, 36), Position=UDim2.new(0, v1105*41, 0, v638*41), BackgroundColor3=v16.bg, Text=(v1108 and "ME")or tostring(v350), TextColor3=(v1108 and v16.YEL)or v16.dm, TextSize=11, Font=v17.b, AutoButtonColor=false}, v345);
+  v21(v1109, 6);
+  v22(v1109, v16.line, 1);
+  local v1110=v350;
+  v348[v1110]={btn=v1109, dx=v1106, dy=v1107};
+  v1109.Activated:Connect(function()local v1276=0;
+    while true do
+      if(v1276==0)then
+        if v347[v1110]then
+          v347[v1110]=nil;
+          for v1747, v1748 in ipairs(v346)do
+            if(v1748==v1110)then
+              table.remove(v346, v1747);
+              break;
+            end
+          end
+        else
+          v347[v1110]=true;
+          table.insert(v346, v1110);
+        end
+        v349();
+        break;
+      end
+    end
+  end
+  );
+end
+end
+v349();
+local v351=v20("TextButton",{Size=UDim2.new(0, 96, 0, 24), Position=UDim2.new(0.5,-150, 0, 236), BackgroundColor3=v16.card2, Text="Atas 3 (2,3,4)", TextColor3=v16.wh, TextSize=10, Font=v17.b, AutoButtonColor=false}, v343);
+v21(v351, 6);
+v26(v351);
+local v352=v20("TextButton",{Size=UDim2.new(0, 96, 0, 24), Position=UDim2.new(0.5,-48, 0, 236), BackgroundColor3=v16.card2, Text="Pilih Semua", TextColor3=v16.wh, TextSize=10, Font=v17.b, AutoButtonColor=false}, v343);
+v21(v352, 6);
+v26(v352);
+local v353=v20("TextButton",{Size=UDim2.new(0, 96, 0, 24), Position=UDim2.new(0.5, 54, 0, 236), BackgroundColor3=v16.card2, Text="Reset Pilihan", TextColor3=v16.wh, TextSize=10, Font=v17.b, AutoButtonColor=false}, v343);
+v21(v353, 6);
+v26(v353);
+v351.Activated:Connect(function()v346={2, 3, 4};
+  v347={[2]=true,[3]=true,[4]=true};
+  v349();
+end
+);
+v352.Activated:Connect(function()v346={};
+  v347={};
+  for v1112=1, 25 do
+    if(v1112~=13)then
+      v347[v1112]=true;
+      table.insert(v346, v1112);
+    end
+  end
+  v349();
+end
+);
+v353.Activated:Connect(function()v346={};
+  v347={};
+  v349();
+end
+);
+v64(v342, "Pengaturan Block & Pukulan");
+local v354, v355=v67(v342, "ID Block Pasang", 2, "Jumlah Hit Break (1-15)", 3);
+v64(v342, "Auto Ambil Block (Saat Stok Habis)");
+local v356, v357=v67(v342, "Ambil Block X", 50, "Ambil Block Y", 36);
+local v358, v359=v67(v342, "Ambil jika Block <", 20, "Tunggu Ambil (dtk)", 3);
+v64(v342, "Pengaturan Auto Collect Senyap");
+local v360, v361=v67(v342, "Jeda Collect/Titik (dtk)", 0.16, "Maks Verifikasi Sisa", 3);
+local v362=v65(v342, "Auto Collect Senyap (1x Pasti) Setelah Break", true);
+local function v363(v639, v640, v641, v642, v643, v644)jika v639 maka v639:FireServer(v74(v643, v641+0.5, v642+0.5));
+  tugas akhir.tunggu(0.025);
+  lokal v645=v98("fg", v641, v642, v643, benar);
+  jika(bukan v645 dan v640)maka v640:FireServer("fg", v641, v642, v643, true);
+elseif(v644 dan v640)maka v640:FireServer("fg", v641, v642, v643, benar);
+  akhir jika bukan v644 maka v79(v643, 1);
+  akhir akhir fungsi lokal v364(v646, v647, v648, v649, v650, v651)lokal v652=0;
+  selama benar lakukan jika(v652==1)maka v99();
+  v98("fg", v648, v649, 0);
+  v652=2;
+  akhir jika(v652==0)maka untuk v1490=1, v650 lakukan jika v651()maka kembali;
+  akhir jika v646 maka v646:FireServer(v74(6, v648+0.5, v649+0.5));
+  akhir v102(v648, v649, v1490, v650);
+  task.wait(0.025);
+  if v646 then
+    v646:FireServer(v74(1, v648+0.551, v649+0.483));
+  end
+  task.wait(0.165);
+end
+task.wait(0.08);
+v652=1;
+end
+if(v652==2)then
+  if v647 then
+    v647:FireServer("fg", v648, v649, 0);
+  end
+  break;
+end
+end
+end
+local function v365(v653, v654, v655, v656, v657, v658)local v659=4.5;
+  v96(false);
+  v92=true;
+  task.wait(0.22);
+  local v660=v107(v653, v654, v659);
+  local v661={};
+  for v1113, v1114 in ipairs(v660)do
+    local v1115=0;
+    local v1116;
+    while true do
+      if(v1115==0)then
+        v1116=v1114.cx .. "," .. v1114.cy;
+        if not v661[v1116]then
+          v661[v1116]={x=v1114.x, y=v1114.y, items={v1114.raw}};
+        else
+          local v1638=0;
+          local v1639;
+          while true do
+            jika(v1638==0)maka v1639=v661[v1116];
+            v1639.items[#v1639.items+1]=v1114.raw;
+            break;
+          end
+        end
+      end
+      break;
+    end
+  end
+end
+local v662={};
+for v1117, v1118 in ipairs(v655)do
+  if v658()then
+    break;
+  end
+  local v1119=math.clamp(v1118.x, 0, 99);
+  local v1120=math.clamp(v1118.y, 0, 59);
+  local v1121=v1119 .. "," .. v1120;
+  v662[v1121]=true;
+  local v1123=v661[v1121];
+  v53(string.format("Kumpulkan Ubin Senyap #%d -> (%d, %d)", v1118.num, v1119, v1120), v16.ON);
+  if v1123 then
+    v117(v1123.x, v1123.y, v1123.items, v656, v658);
+  else
+    v118(v1119, v1120, v656, v658);
+  end
+end
+for v1124, v1125 in pairs(v661)do
+  if v658()then
+    break;
+  end
+  if not v662[v1124]then
+    v117(v1125.x, v1125.y, v1125.items, v656, v658);
+  end
+end
+for v1126=1, v657 lakukan jika v658()maka hentikan;
+akhir tugas.tunggu(0.12);
+lokal v1127=v107(v653, v654, v659);
+jika(#v1127==0)maka hentikan;
+akhir v53(string.format("Verifikasi Sisa Drop #%d (%d item)...", v1126, #v1127), v16.ON);
+untuk v1277, v1278 dalam ipairs(v1127)lakukan jika v658()maka hentikan;
+akhir jika bukan v104(v1278.raw)maka v117(v1278.x, v1278.y,{v1278.raw}, v656, v658);
+akhir akhir akhir jika bukan v658()maka v119(v653, v654, v658);
+akhir task.delay(0.25, function()v92=false;
+end
+);
+end
+v64(v342, "Kontrol Farm");
+local v366, v367, v368=false, 0, 0;
+local v369;
+v369=v65(v342, "Auto Pasang & Break (5x5 v3.0)", false, function(v663)v366=v663;
+  v368=v368+1;
+  local v664=v368;
+  if not v663 then
+    local v1279=0;
+    while true do
+      if(v1279==1)then
+        v53("Farm berhenti", v16.YEL);
+        return;
+      end
+      if(v1279==0)then
+        v92=false;
+        v112();
+        v1279=1;
+      end
+    end
+  end
+  if(#v346==0)then
+    local v1280=0;
+    while true do
+      if(v1280==0)then
+        v53("Pilih minimal 1 tile di atas!", v16.RED);
+        v56("Farm: pilih minimal 1 tile!", v16.RED);
+        v1280=1;
+      end
+      if(1==v1280)then
+        v366=false;
+        v369.set(false, true);
+        v1280=2;
+      end
+      if(v1280==2)then
+        return;
+      end
+    end
+  end
+  if not(v13.x and v13.y)then
+    local v1281=0;
+    while true do
+      if(v1281==1)then
+        v366=false;
+        v369.set(false, true);
+        v1281=2;
+      end
+      if(v1281==0)then
+        v53("Gerakkan karakter dulu agar posisi ME terbaca", v16.RED);
+        v56("Farm: geser karakter sedikit dulu!", v16.RED);
+        v1281=1;
+      end
+      if(v1281==2)then
+        return;
+      end
+    end
+  end
+  local v665, v666, v667=v73();
+  if not(v665 and v667)then
+    v53("Remote tidak ditemukan", v16.RED);
+    v56("Farm: remote tidak ditemukan", v16.RED);
+    v366=false;
+    v369.set(false, true);
+    return;
+  end
+  v96(true);
+  local v668, v669=v115(v13.x, v13.y);
+  v56(string.format("Auto Farm 5x5 v3.0 dimulai | ME=(%d, %d)", v668, v669), v16.ON);
+  local v670=function()return not v366 or(v664~=v368)or not v31.Parent;
+  end
+  while v366 and(v664==v368)and v31.Parent do
+    local v1128=tonumber(v354.Text)or 2;
+    local v1129=math.clamp(math.floor(tonumber(v355.Text)or 3), 1, 15);
+    local v1130=math.floor(tonumber(v356.Text)or 50);
+    local v1131=math.floor(tonumber(v357.Text)or 36);
+    local v1132=math.max(math.floor(tonumber(v358.Text)or 20), 1);
+    local v1133=math.max(tonumber(v359.Text)or 3, 0.5);
+    local v1134=math.clamp(tonumber(v360.Text)atau 0.16, 0.08, 1);
+    local v1135=math.clamp(math.floor(tonumber(v361.Text)or 3), 1, 10);
+    local v1136=v78(v1128, true);
+    if((v1136~=nil)and(v1136<v1132))then
+      v53(string.format("Stok ID %d sisa %d (< %d) -> Jalan ambil ke (%d, %d)...", v1128, v1136, v1132, v1130, v1131), v16.YEL);
+      if v120(v1130, v1131, v670, 45)then
+        local v1556=0;
+        local v1557;
+        while true do
+          if(v1556==0)then
+            v1557=os.clock();
+            while not v670()and(((os.clock()-v1557)<v1133)or((v78(v1128, true)or 0)<v1132))do
+              if((os.clock()-v1557)>math.max(v1133+6, 10))then
+                break;
+              end
+              task.wait(0.25);
+            end
+            break;
+          end
+        end
+      end
+      if v670()then
+        break;
+      end
+      v53(string.format("Selesai ambil block (stok: %s) -> Balik ke ME (%d, %d)...", tostring(v78(v1128, true)or "?"), v668, v669), v16.ON);
+      v120(v668, v669, v670, 45);
+      v119(v668, v669, v670);
+    end
+    local v1137, v1138=v115(v13.x, v13.y);
+    if((v1137~=v668)or(v1138~=v669))then
+      v119(v668, v669, v670);
+    else
+      local v1384=0;
+      while true do
+        if(0==v1384)then
+          v116(v668+0.5, v669+0.999);
+          task.wait(0.06);
+          break;
+        end
+      end
+    end
+    if v670()then
+      break;
+    end
+    local v1139={};
+    for v1282, v1283 in ipairs(v346)do
+      table.insert(v1139, v1283);
+    end
+    for v1284, v1285 in ipairs(v1139)do
+      if v670()then
+        break;
+      end
+      local v1286=v348[v1285];
+      local v1287, v1288=v668+v1286.dx, v669+v1286.dy;
+      v53(string.format("Pasang Tile #%d di (%d, %d)", v1285, v1287, v1288), v16.ON);
+      v363(v665, v667, v1287, v1288, v1128, false);
+      task.wait(0.175);
+      akhir tugas.tunggu(0.1);
+      untuk v1289, v1290 dalam ipairs(v1139)lakukan jika v670()maka berhenti;
+      akhir lokal v1291=v348[v1290];
+      lokal v1292, v1293=v668+v1291.dx, v669+v1291.dy;
+      local v1294=v97(v1292, v1293);
+      if((v1294==nil)or(v1294==0)or(v1294~=v1128))then
+        v53(string.format("Retry Pasang Tile #%d di (%d, %d)", v1290, v1292, v1293), v16.ON);
+        v363(v665, v667, v1292, v1293, v1128, true);
+        task.wait(0.16);
+      else
+        if v665 then
+          v665:FireServer(v74(v1128, v1292+0.5, v1293+0.5));
+        end
+        if v667 then
+          v667:FireServer("fg", v1292, v1293, v1128, true);
+        end
+        task.wait(0.08);
+      end
+    end
+    task.wait(0.24);
+    local v1140={};
+    for v1295, v1296 in ipairs(v1139)do
+      if v670()then
+        break;
+      end
+      local v1297=v348[v1296];
+      local v1298, v1299=v668+v1297.dx, v669+v1297.dy;
+      v1140[#v1140+1]={x=v1298, y=v1299, num=v1296};
+      v53(string.format("Break Fist Ubin #%d di (%d, %d) [%d hit]...", v1296, v1298, v1299, v1129), v16.ON);
+      v364(v665, v667, v1298, v1299, v1129, v670);
+      task.wait(0.08);
+    end
+    if(v362.get()and not v670())then
+      v365(v668, v669, v1140, v1134, v1135, v670);
+    end
+    v367=v367+1;
+    v53(string.format("Farm berjalan | Siklus #%d | Stok ID %d: %s", v367, v1128, tostring(v78(v1128, true)or "?")), v16.ON);
+    task.wait(0.15);
+  end
+  v92=false;
+  v112();
+end
+);
+v69(v342, "Posisi karakter ('ME') saat tombol dinyalakan menjadi titik tengah tetap. Otomatis ambil block saat habis, pasang dengan Auto-Retry, break dengan efek Asap Puff, dancollect 100% senyap.");
+v28[#v28+1]=function()v366=false;
+  v368=v368+1;
+  v92=false;
+  v112();
+  v369.set(false, true);
+end
+end
+)();(function()local v371=v63("Auto DF", "⛏️", "Gali baris otomatis + tambal lava + pasang tepi • v" .. v1);
+  getgenv().DFDone=getgenv().DFDone atau{};
+  lokal v373=getgenv().DFDone;
+  getgenv().DFPatched=getgenv().DFPatched or{};
+  local v375=getgenv().DFPatched;
+  local v376={};
+  local v377={on=false, cx=0, cy=0, dead=false};
+  v64(v371, "Kontrol");
+  local v378=v20("Frame",{Size=UDim2.new(1, 0, 0, 0), AutomaticSize=Enum.AutomaticSize.Y, BackgroundColor3=v16.card, LayoutOrder=v61()}, v371);
+  v21(v378, 10);
+  v24(v378, 10, 10, 10, 10);
+  v20("UIListLayout",{Padding=UDim.new(0, 8), SortOrder=Enum.SortOrder.LayoutOrder}, v378);
+  local v379=v20("Frame",{Size=UDim2.new(1, 0, 0, 16), BackgroundTransparency=1, LayoutOrder=1}, v378);
+  local v380=v20("Frame",{Size=UDim2.new(0, 8, 0, 8), Position=UDim2.new(0, 0, 0.5,-4), BackgroundColor3=v16.RED}, v379);
+  v21(v380, 4);
+  local v381=v20("TextLabel",{Size=UDim2.new(1,-60, 1, 0), Position=UDim2.new(0, 14, 0, 0), BackgroundTransparency=1, Text="Siap", TextColor3=v16.wh, TextSize=12, Font=v17.b, TextXAlignment=v18}, v379);
+  local v382=v20("TextLabel",{Size=UDim2.new(0, 50, 1, 0), Position=UDim2.new(1,-50, 0, 0), BackgroundTransparency=1, Text="0%", TextColor3=v16.acc2, TextSize=12, Font=v17.b, TextXAlignment=v19}, v379);
+  local v383=v20("Frame",{Size=UDim2.new(1, 0, 0, 8), BackgroundColor3=v16.bg, LayoutOrder=2}, v378);
+  v21(v383, 4);
+  local v384=v20("Frame",{Size=UDim2.new(0, 0, 1, 0), BackgroundColor3=v16.wh}, v383);
+  v21(v384, 4);
+  v23(v384, v16.acc, v16.acc2);
+  local v385=v20("TextButton",{Size=UDim2.new(1, 0, 0, 36), BackgroundColor3=v16.acc, Text="MULAI", AutoButtonColor=false, TextColor3=v16.wh, TextSize=13, Font=v17.b, LayoutOrder=3}, v378);
+  v21(v385, 9);
+  v26(v385);
+  local v386=v20("TextLabel",{Size=UDim2.new(1, 0, 0, 66), BackgroundColor3=v16.bg, LayoutOrder=4, Text="Gerakkan karakter dulu supaya posisi terbaca.", TextColor3=v16.dm, TextSize=11, Font=v17.r, TextWrapped=true, TextXAlignment=v18, TextYAlignment=Enum.TextYAlignment.Top}, v378);
+  v21(v386, 8);
+  v24(v386, 6, 8, 8, 6);
+  v64(v371, "Area gali");
+  local v387, v388=v67(v371, "Baris mulai (y)", 38, "Baris akhir (y)", 52);
+  local v389, v390=v67(v371, "Kolom dari x", 0, "Kolom sampai x", 99);
+  lokal v391, v392=v67(v371, "Jarak antar baris", 2, "Tinggi tubuh (1/2)", 1);
+  v64(v371, "Blok target");
+  local v393, v394=v67(v371, "ID blok dihancurkan", "2, 10, 4", "ID background (gua)", "14");
+  v64(v371, "Pukulan");
+  local v395, v396=v67(v371, "Pukulan kotoran (ID 2)", 3, "Pukulan batu (ID 10)", 8);
+  local v397, v398=v67(v371, "Pukulan lava (ID 4)", 3, "Pukul dari (ubin di atas)", 2);
+  v64(v371, "Lava");
+  local v399=v67(v371, "Maks lapis lava bawah", 3);
+  local v400=v65(v371, "Auto Lava lantai pijakan -> Dirt", true);
+  local v401=v65(v371, "Melayang di lubang (lava dalam)", true);
+  v64(v371, "Opsi");
+  local v402=v65(v371, "Hancurkan background (cave)", true);
+  local v403=v65(v371, "Ingat tile yang sudah hancur", true);
+  local v404=v65(v371, "Teleport pendek kalau macet", true);
+  local v405=v65(v371, "Susuri baris terakhir (ambil drop)", true);
+  v64(v371, "Tahap Lanjutan: Pasang Dirt Tepi & Baris 35");
+  local v406=v65(v371, "Lanjut pasang Dirt Tepi & Baris 35 setelah DF", true);
+  local v407, v408=v67(v371, "Ambil Dirt: X", 50, "Ambil Dirt: Y (berdiri)", 36);
+  local v409, v410=v67(v371, "Ambil jika Dirt <", 20, "Tunggu ambil (dtk)", 3);
+  local v411, v412=false, false;
+  local function v413(v671)local v672=0;
+    local v673;
+    while true do
+      if(v672==1)then
+        v53("Auto DF: " ..(v671:match("^[^\n]*")or v671),(v411 and v16.ON)or v16.dm);
+        v673=getgenv().DFApi;
+        v672=2;
+      end
+      if(v672==2)then
+        if(v673 and v673.onSay)then
+          pcall(v673.onSay, v671);
+        end
+        break;
+      end
+      if(0==v672)then
+        v671=tostring(v671);
+        v386.Text=v671;
+        v672=1;
+      end
+    end
+  end
+  local function v414(v674, v675, v676, v677)return math.sqrt(((v674-v676)^2)+((v675-v677)^2));
+  end
+  local function v415(v678)local v679=0;
+    while true do
+      if(1==v679)then
+        v382.Text=math.floor((v678*100)+0.5).. "%";
+        break;
+      end
+      if(v679==0)then
+        v678=math.clamp(v678, 0, 1);
+        v25(v384, 0.2,{Size=UDim2.new(v678, 0, 1, 0)});
+        v679=1;
+      end
+    end
+  end
+  local function v416()pcall(function()local v1141=v8.PlayerGui.MenuGui.Menu.Fade.Area.Panel;
+    local v1142=v1141:GetChildren()[5];
+    local v1143=v1142 and v1142:FindFirstChildWhichIsA("TextButton", true);
+    jika v1143 maka jika firesignal maka pcall(function()firesignal(v1143.MouseButton1Click);
+    end
+    );
+    pcall(function()firesignal(v1143.Activated);
+    end
+    );
+  elseif getconnections maka local v1698=0;
+    selama benar lakukan jika(v1698==0)maka untuk v1839, v1840 dalam ipairs(getconnections(v1143.MouseButton1Click))lakukan v1840:Fire();
+  end
+  untuk v1841, v1842 dalam ipairs(getconnections(v1143.Activated))lakukan v1842:Fire();
+end
+break;
+end
+end
+end
+end
+end
+);
+end
+local v417=nil;
+local v418=nil;
+local function v419(v680)jika(bukan v680 dan v417 dan(type(rawget(v417, "slots"))=="table"))then
+  return v417, v418;
+end
+v417, v418=nil, nil;
+if not getgc then
+  return nil, nil;
+end
+local v681, v682=pcall(getgc, true);
+if(not v681 or(type(v682)~="table"))then
+  return nil, nil;
+end
+for v1144, v1145 in ipairs(v682)do
+  if(type(v1145)=="table")then
+    if(rawget(v1145, "capacity")and(type(rawget(v1145, "slots"))=="table"))then
+      local v1558=0;
+      local v1559;
+      while true do
+        if(v1558==0)then
+          v1559=rawget(v1145, "slots");
+          if((rawget(v1145, "selected")~=nil)or(rawget(v1559, 1)~=nil))then
+            v417=v1145;
+          end
+          break;
+        end
+      end
+    end
+    if(not v418 and(type(rawget(v1145, "refresh"))=="function")and(rawget(v1145, "screen")~=nil))then
+      v418=v1145;
+    end
+  end
+end
+return v417, v418;
+end
+local function v420(v683)local v684=0;
+  local v685;
+  local v686;
+  local v687;
+  while true do
+    if(v684==2)then
+      if(type(v686)~="table")then
+        return nil;
+      end
+      v687=0;
+      v684=3;
+      akhir jika(v684==1)maka jika bukan v685 maka kembalikan nil;
+      akhir v686=rawget(v685, "slots");
+      v684=2;
+      akhir jika(v684==0)maka v685=v419(false);
+      jika bukan v685 maka v685=v419(true);
+      akhir v684=1;
+      akhir jika(v684==3)maka untuk v1491, v1492 dalam pasangan(v686)lakukan jika((tipe(v1492)=="table")dan(ke nomor(rawget(v1492, "id")))==v683))maka v687=v687+(tonumber(rawget(v1492, "n"))or 0);
+    end
+  end
+  return v687;
+end
+end
+end
+local v421=nil;
+local v422=0;
+local function v423(v688)if(v688 or not v421 or((os.clock()-v422)>=3))then
+  local v1301=0;
+  local v1302;
+  while true do
+    if(v1301==0)then
+      v1302=v420(2);
+      if(v1302~=nil)then
+        v421=v1302;
+        v422=os.clock();
+      end
+      break;
+    end
+  end
+end
+return v421;
+end
+local v424=v4:FindFirstChild("WorldRemotes")and v4.WorldRemotes:FindFirstChild("SaveInventory");
+local function v425()pcall(function()local v1146, v1147=v419(false);
+  if not v1146 then
+    return;
+  end
+  local v1148=rawget(v1146, "slots");
+  if(type(v1148)~="table")then
+    kembali;
+    akhir untuk v1303, v1304 dalam pasangan(v1148)lakukan jika((tipe(v1304)=="table")dan(tonumber(rawget(v1304, "id"))==2))maka lokal v1493=tonumber(rawget(v1304, "n"))atau 0;
+    jika(v1493>1)maka rawset(v1304, "n", v1493-1);
+  else
+    v1148[v1303]=nil;
+    akhir break;
+    akhir akhir jika(v1147 dan(tipe(rawget(v1147, "refresh"))=="function"))maka task.spawn(rawget(v1147, "refresh"));
+      akhir jika bukan v424 maka lokal v1388=0;
+      lokal v1389;
+      selama benar lakukan jika(v1388==0)maka v1389=v4:FindFirstChild("WorldRemotes");
+      v424=v1389 dan v1389:FindFirstChild("SaveInventory");
+      break;
+    end
+  end
+end
+jika v424 maka pcall(function()v424:FireServer(v1148);
+end
+);
+end
+end
+);
+end
+local v426, v427, v428;
+local function v429()local v689=0;
+  local v690;
+  while true lakukan jika(v689==2)maka kembalikan v426 dan v427 dan v428;
+end
+jika(v689==1)maka v690=v4:FindFirstChild("WorldRemotes");
+v428=v690 dan v690:FindFirstChild("SetTile");
+v689=2;
+end
+if(v689==0)kemudian untuk v1494, v1495 dalam ipairs(v4:GetDescendants())lakukan jika((v1495.Name=="MoveTo")dan v1495:IsA("RemoteEvent"))maka v426=v1495;
+end
+end
+v427=v4:FindFirstChild("ByteNetReliable");
+v689=1;
+end
+end
+end
+local function v430(v691, v692)return math.floor(v691), math.floor(v692-0.001);
+end
+local function v431(v693, v694)return v693+0.5, v694+0.999;
+end
+local function v432(v695, v696)jika bukan v426 maka kembalikan false;
+  akhir kembalikan pcall(firesignal, v426.OnClientEvent, v695, v696);
+  akhir fungsi lokal v433(v697, v698, v699)lokal v700, v701=v431(v697, v698);
+  v701=v701-(v699 atau 0);
+  jika v426 maka pcall(firesignal, v426.OnClientEvent, v700, v701);
+  akhir jika v14 maka pcall(function()lokal v1390=0;
+    lokal v1391;
+    selama benar lakukan jika(v1390==2)maka v14:FireServer(v1391);
+    break;
+    akhir jika(v1390==0)maka v1391=buffer.create(9);
+    buffer.writeu8(v1391, 0, 2);
+    v1390=1;
+  end
+  jika(v1390==1)maka buffer.writef32(v1391, 1, v701);
+  buffer.writef32(v1391, 5, v700);
+  v1390=2;
+end
+end
+end
+);
+end
+v13.x, v13.y=v700, v701;
+end
+task.spawn(function()while not v377.dead do
+  local v1149=0;
+  while true do
+    if(v1149==0)then
+      if(v377.on and not v412)then
+        v433(v377.cx, v377.cy, 0.3);
+      end
+      task.wait(0.06);
+      break;
+    end
+  end
+end
+end
+);
+local function v434(v704, v705)local v706=0;
+  while true do
+    if(v706==0)then
+      v377.cx, v377.cy, v377.on=v704, v705, true;
+      task.wait(0.25);
+      break;
+    end
+  end
+end
+local function v435()local v707, v708=pcall(function()return v8.PlayerGui.GameGui.World.Camera;
+end
+);
+if(not v707 or not v708)then
+  return false;
+end
+local v709=workspace.CurrentCamera.ViewportSize/2;
+for v1150, v1151 in ipairs(v708:GetChildren())do
+  if(v1151.Name=="Drop")then
+    local v1395=0;
+    local v1396;
+    while true do
+      if(v1395==0)then
+        v1396=v1151.AbsolutePosition+(v1151.AbsoluteSize/2);
+        if((v1396-v709).Magnitude<85)then
+          return true;
+        end
+        break;
+      end
+    end
+  end
+  akhir return false;
+  akhir local v436;
+  fungsi lokal v437(v710)jika(tipe(v710)~="table")maka kembalikan false;
+  akhir local v711=rawget(v710, 2);
+  kembalikan(tipe(v711)=="table")dan(rawget(v711, "name")~=nil)dan(rawget(v711, "solid")~=nil);
+  akhir fungsi lokal v438(v712)local v713=0;
+  local v714;
+  local v715;
+  local v716;
+  selama benar lakukan jika(2==v713)maka kembalikan(tipe(v716)=="table")dan(#v716>=50);
+  akhir jika(v713==1)maka jika((tipe(v714)~="table")atau(tipe(v715)~="table")))maka kembalikan false;
+  akhir v716=rawget(v714, 1);
+  v713=2;
+end
+if(v713==0)then
+  if(type(v712)~="table")then
+    return false;
+  end
+  v714, v715=rawget(v712, "fg"), rawget(v712, "bg");
+  v713=1;
+end
+end
+end
+local function v439()if(v436 and v436.fg)then
+  return v436;
+end
+local v717, v718;
+local function v719(v1152)local v1153=0;
+  local v1154;
+  local v1155;
+  while true do
+    if(v1153==1)then
+      for v1560, v1561 dalam pasangan(v1155)lakukan lokal v1562=0;
+      selama benar lakukan jika(0==v1562)maka jika(bukan v717 dan v438(v1561))maka v717=v1561;
+      akhir jika(bukan v718 dan v437(v1561))maka v718=v1561;
+      akhir break;
+      akhir akhir akhir break;
+      akhir jika(v1153==0)maka v1154, v1155=pcall(debug.getupvalues, v1152);
+      jika(bukan v1154 atau(tipe(v1155)~="table"))maka kembalikan;
+      akhir v1153=1;
+      akhir akhir akhir untuk v1156, v1157 dalam ipairs(v4:GetDescendants())lakukan jika(v1157:IsA("RemoteEvent")dan((v1157.Name=="TileChanged")atau(v1157.Name=="LockChanged")atau(v1157.Name=="DoorChanged")))maka local v1397=0;
+      local v1398;
+      local v1399;
+      while true lakukan jika(v1397==0)maka v1398, v1399=pcall(getconnections, v1157.OnClientEvent);
+      jika(v1398 dan(type(v1399)=="table"))maka untuk v1789, v1790 dalam ipairs(v1399)lakukan local v1791=0;
+      local v1792;
+      local v1793;
+      while true lakukan jika(v1791==0)maka v1792, v1793=pcall(function()return v1790.Function;
+      end
+      );
+      if(v1792 and(type(v1793)=="function"))then
+        v719(v1793);
+      end
+      break;
+    end
+  end
+end
+end
+break;
+end
+end
+end
+end
+if not(v717 and v718)then
+  local v1305=0;
+  local v1306;
+  local v1307;
+  while true do
+    if(v1305==0)then
+      v1306, v1307=pcall(getgc, true);
+      if v1306 then
+        for v1749, v1750 in ipairs(v1307)do
+          if(type(v1750)=="table")then
+            if(not v717 and v438(v1750))then
+              v717=v1750;
+            end
+            if(not v718 and v437(v1750))then
+              v718=v1750;
+            end
+            if(v717 and v718)then
+              break;
+            end
+          end
+        end
+      end
+      break;
+    end
+  end
+end
+if not v717 then
+  local v1308=0;
+  while true do
+    if(v1308==0)then
+      getgenv().WorldWhy="tabel dunia (fg/bg) tidak ditemukan";
+      return nil;
+    end
+  end
+end
+if not v718 then
+  getgenv().WorldWhy="database item tidak ditemukan";
+  return nil;
+end
+v436={fg=v717.fg, bg=v717.bg, items=v718, w=v717.w or 100, h=v717.h or 60};
+return v436;
+end
+local v440={};
+local function v441(v720, v721, v722)return v720 .. v721 .. "," .. v722;
+end
+local function v442(v723, v724, v725)local v726=0;
+  local v727;
+  local v728;
+  local v729;
+  local v730;
+  while true do
+    if(v726==0)then
+      v727=v439();
+      if not v727 then
+        return 0;
+      end
+      v726=1;
+    end
+    if(v726==1)then
+      v728=v727[v723];
+      v729=v728 and v728[v725];
+      v726=2;
+    end
+    if(v726==3)then
+      return tonumber(v730)or 0;
+    end
+    if(v726==2)then
+      v730=v729 and v729[v724];
+      if(type(v730)=="table")then
+        v730=v730[1]or v730.id;
+      end
+      v726=3;
+    end
+  end
+end
+local function v443(v731, v732, v733)if((v731=="fg")and v375[v441("fg", v732, v733)])then
+  return 2;
+end
+if(v440.mem and v373[v441(v731, v732, v733)])then
+  return 0;
+end
+return v442(v731, v732, v733);
+end
+local function v444(v734, v735)return v443("fg", v734, v735);
+end
+local function v445(v736, v737)local v738=0;
+  local v739;
+  local v740;
+  local v741;
+  while true do
+    if(v738==3)then
+      return(v741.solid==true)or(v741.hurts==true);
+    end
+    if(v738==0)then
+      v739=v439();
+      if(not v739 or(v736<0)or(v736>=v739.w)or(v737<0)or(v737>=v739.h))then
+        return true;
+      end
+      v738=1;
+    end
+    if(2==v738)then
+      v741=v739.items[v740];
+      if not v741 then
+        return true;
+      end
+      v738=3;
+    end
+    if(v738==1)then
+      v740=v444(v736, v737);
+      if((v740==nil)or(v740==0))then
+        return false;
+      end
+      v738=2;
+    end
+  end
+end
+local function v446(v742, v743)local v744=0;
+  while true do
+    if(0==v744)then
+      for v1496=0,(v440.body or 1)-1 do
+        if v445(v742, v743-v1496)then
+          return false;
+        end
+      end
+      return true;
+    end
+  end
+end
+local function v447(v745, v746, v747, v748)local v749=0;
+  local v750;
+  local v751;
+  local v752;
+  while true do
+    if(v749==1)then
+      v752=v751 and v751[v746];
+      if v752 then
+        pcall(function()v752[v745]=v748 atau 0;
+        end
+        );
+      end
+      break;
+    end
+    jika(v749==0)maka v750=v439();
+    v751=v750 dan v750[v747];
+    v749=1;
+  end
+end
+end
+fungsi lokal v448(v753, v754, v755, v756)lokal v757=0;
+lokal v758;
+lokal v759;
+lokal v760;
+lokal v761;
+lokal v762;
+while true lakukan jika(v757==1)maka v759={[v758(v753, v754)]=false};
+v760, v761={{v753, v754}}, 1;
+v757=2;
+akhir jika(v757==0)maka v758=nil;
+fungsi v758(v1497, v1498)kembalikan(v1498*256)+v1497;
+akhir v757=1;
+akhir jika(v757==2)maka v762={{1, 0},{-1, 0},{0, 1},{0,-1}};
+sementara(v761<=#v760)dan(v761<9000)lakukan lokal v1499=v760[v761];
+v761=v761+1;
+jika((v1499[1]==v755)dan(v1499[2]==v756))maka lokal v1642, v1643={}, v1499;
+while v1643 lakukan table.insert(v1642, 1, v1643);
+v1643=v759[v758(v1643[1], v1643[2])];
+end
+return v1642;
+end
+untuk v1564, v1565 dalam ipairs(v762)lakukan lokal v1566=0;
+lokal v1567;
+lokal v1568;
+lokal v1569;
+while true lakukan jika(v1566==0)maka v1567, v1568=v1499[1]+v1565[1], v1499[2]+v1565[2];
+v1569=v758(v1567, v1568);
+v1566=1;
+end
+if(v1566==1)then
+  if((v759[v1569]==nil)and v446(v1567, v1568))then
+    local v1819=0;
+    while true do
+      if(v1819==0)then
+        v759[v1569]=v1499;
+        v760[#v760+1]={v1567, v1568};
+        break;
+      end
+    end
+  end
+  break;
+end
+end
+end
+end
+break;
+end
+end
+end
+local v449, v450=Enum.KeyCode.A, Enum.KeyCode.D;
+local v451;
+local function v452(v763, v764)pcall(function()v7:SendKeyEvent(v764, v763, false, game);
+end
+);
+end
+local function v453()local v765=0;
+  while true do
+    if(v765==1)then
+      v452(v450, false);
+      break;
+    end
+    if(v765==0)then
+      v451=nil;
+      v452(v449, false);
+      v765=1;
+    end
+  end
+end
+local function v454(v766)if(v451~=v766)then
+  v453();
+  v452(v766, true);
+  v451=v766;
+end
+end
+local function v455()v452(Enum.KeyCode.Space, true);
+  task.wait(0.12);
+  v452(Enum.KeyCode.Space, false);
+end
+local function v456(v767, v768)local v769=0;
+  local v770;
+  local v771;
+  while true do
+    if(v769==0)then
+      if not v440.tp then
+        return;
+      end
+      v770, v771=v431(v767, v768);
+      v769=1;
+    end
+    if(v769==1)then
+      v432(v770, v771);
+      task.wait(0.35);
+      break;
+    end
+  end
+end
+local function v457(v772, v773)lokal v774=0;
+  untuk v1158=1, 120 lakukan lokal v1159=0;
+  lokal v1160;
+  lokal v1161;
+  selama benar lakukan jika(v1159==0)maka jika v412 maka lokal v1644=0;
+  selama benar lakukan jika(0==v1644)maka v453();
+  kembalikan false;
+  akhir akhir akhir v1160, v1161=v430(v13.x, v13.y);
+  v1159=1;
+  akhir jika(v1159==1)maka jika((v1160==v772)dan(v1161==v773))maka lokal v1645=0;
+  lokal v1646;
+  selama benar lakukan jika(v1645==0)maka v1646=(v772+0.5)-v13.x;
+  jika(math.abs(v1646)<0.45)maka v453();
+  kembalikan benar;
+  akhir v1645=1;
+  akhir jika(v1645==1)maka v454(((v1646>0)dan v450)atau v449);
+  tugas.tunggu(0.03);
+  berhenti;
+  akhir akhir jika tidak lokal v1647=0;
+  lokal v1648;
+  lokal v1649;
+  lokal v1650;
+  local v1651;
+  local v1652;
+  local v1653;
+  while true do
+    if(v1647==0)then
+      v1648=v448(v1160, v1161, v772, v773);
+      if(not v1648 or(#v1648<2))then
+        local v1843=0;
+        while true do
+          if(0==v1843)then
+            v453();
+            return false;
+          end
+        end
+      end
+      v1647=1;
+    end
+    if(1==v1647)then
+      v1649, v1650=v1648[2][1], v1648[2][2];
+      v1651, v1652=v13.x, v13.y;
+      v1647=2;
+    end
+    if(v1647==2)then
+      v1653=os.clock();
+      if(v1650==v1161)then
+        v454(((v1649>v1160)and v450)or v449);
+        while not v412 and((os.clock()-v1653)<0.8)do
+          task.wait(0.03);
+          local v1857=v430(v13.x, v13.y);
+          if(v1857==v1649)then
+            break;
+          end
+        end
+      elseif(v1650>v1161)then
+        v453();
+        while not v412 and((os.clock()-v1653)<0.7)do
+          task.wait(0.03);
+          local v1877, v1878=v430(v13.x, v13.y);
+          if(v1878>=v1650)then
+            break;
+          end
+        end
+      else
+        local v1865=0;
+        while true do
+          if(v1865==0)then
+            v453();
+            v455();
+            v1865=1;
+          end
+          if(v1865==1)then
+            task.wait(0.4);
+            break;
+          end
+        end
+      end
+      v1647=3;
+    end
+    if(v1647==3)then
+      if(v414(v13.x, v13.y, v1651, v1652)<0.1)then
+        v774=v774+1;
+        if(v1650==v1161)then
+          v455();
+        end
+        if(v774>=2)then
+          local v1866=0;
+          while true do
+            if(v1866==0)then
+              v456(v1649, v1650);
+              v774=0;
+              break;
+            end
+          end
+        end
+      else
+        v774=0;
+      end
+      break;
+    end
+  end
+end
+break;
+end
+end
+end
+v453();
+return false;
+end
+local function v458(v775)v775=tonumber(v775)or 0;
+  if(v775==10)then
+    return v440.rockHits;
+  end
+  if(v775==4)then
+    return v440.lavaHits;
+  end
+  return v440.hits;
+end
+local function v459(v776, v777, v778)local v779=0;
+  selama benar lakukan jika(v779==0)maka untuk v1500=1, v778 lakukan lokal v1501=0;
+  selama benar lakukan jika(v1501==1)maka task.wait(0.02);
+  v427:FireServer(v74(1, v776+0.69, v777+0.64));
+  v1501=2;
+  akhir jika(v1501==0)maka jika v412 maka kembalikan false;
+  akhir v427:FireServer(v74(6, v776+0.5, v777+0.5));
+  v1501=1;
+  akhir jika(v1501==2)then
+    task.wait(0.15);
+    break;
+  end
+end
+end
+return true;
+end
+end
+end
+local function v460(v780, v781, v782, v783)if not v459(v780, v781, v458(v783))then
+  return;
+end
+v428:FireServer(v782, v780, v781, 0);
+v447(v780, v781, v782, 0);
+v373[v441(v782, v780, v781)]=true;
+end
+local function v461(v785, v786)local v787=0;
+  local v788;
+  local v789;
+  local v790;
+  while true do
+    if(2==v787)lalu kembalikan v788;
+    akhir jika(v787==0)maka v788={v786};
+    v789=v786;
+    v787=1;
+    akhir jika(1==v787)maka v790=0;
+    selama v790<v440.lavaDeep lakukan lokal v1502=v442("fg", v785, v789+1);
+    jika(v1502==4)maka v788[#v788+1]=v789+1;
+    v789=v789+1;
+    v790=v790+1;
+  else
+    lokal v1655=v442("fg", v785, v789+2);
+    jika((v1502~=0)dan(v1655==4))maka lokal v1751=0;
+    selama benar lakukan jika(v1751==1)maka v789=v789+2;
+    v790=v790+1;
+    break;
+  end
+  jika(0==v1751)maka v788[#v788+1]=v789+1;
+  v788[#v788+1]=v789+2;
+  v1751=1;
+end
+end
+else
+  break;
+end
+end
+end
+v787=2;
+end
+end
+end
+fungsi lokal v462(v791, v792)lokal v793=0;
+lokal v794;
+lokal v795;
+lokal v796;
+local v797;
+local v798;
+local v799;
+local v800;
+local v801;
+while true do
+  if(v793==1)then
+    v798=nil;
+    v799=((v794<=v791)and-1)or 1;
+    for v1503, v1504 in ipairs({v799,-v799})lakukan lokal v1505=v791+v1504;
+    jika((v1505>=0)dan(v1505<=v796)dan v446(v1505, v797))maka v798=v1505;
+    break;
+  end
+end
+v800=v461(v791, v792);
+v793=2;
+end
+jika(v793==0)maka v794=v430(v13.x, v13.y);
+v795=v439();
+v796=((v795 dan v795.w)atau 100)-1;
+v797=math.max(v792-1, 0);
+v793=1;
+end
+jika(v793==2)maka v801={};
+for v1506, v1507 in ipairs(v800)do
+  v801[v1506]=v442("fg", v791, v1507);
+end
+return v798, v797, v800, v801;
+end
+end
+end
+local function v463(v802, v803)v453();
+  local v804, v805, v806, v807=v462(v802, v803);
+  if not v804 then
+    v376[v441("fg", v802, v803)]=true;
+    v413(string.format("[Lava] tidak ada titik aman di samping (%d,%d),", v802, v803));
+    return false;
+  end
+  v413(string.format("[Lava] TP ke (%d,%d), kolom %d tile, tunggu 1 dtk...", v804, v805, #v806));
+  v433(v804, v805);
+  task.wait(0.2);
+  v433(v804, v805);
+  task.wait(1);
+  if v412 then
+    return false;
+  end
+  local v808=0;
+  for v1162, v1163 in ipairs(v806)do
+    if v412 then
+      return false;
+    end
+    local v1164=(v1163-v805)>2;
+    if v1164 then
+      if not v440.hover then
+        break;
+      end
+      v434(v802, v1163-1);
+    end
+    v413(string.format("[Lava] memecahkan (%d,%d) [%d/%d]", v802, v1163, v1162, #v806));
+    local v1165=v459(v802, v1163, v458(v807[v1162]));
+    if not v1165 then
+      return false;
+    end
+    v428:FireServer("fg", v802, v1163, 0);
+    v447(v802, v1163, "fg", 0);
+    v808=v1162;
+    task.wait(0.3);
+  end
+  if(v808==0)then
+    local v1311=0;
+    while true do
+      if(v1311==1)then
+        return false;
+      end
+      if(v1311==0)maka v377.on=false;
+      v376[v441("fg", v802, v803)]=true;
+      v1311=1;
+    end
+  end
+end
+local v809=v806[v808];
+local v810=v442("fg", v802, v809+1)==4;
+if(v810 and not v440.hover)then
+  v413("[Lava] dasar lubang masih lava, ambil drop (aktifkan Melayang)");
+else
+  local v1312=0;
+  local v1313;
+  while true do
+    if(v1312==0)then
+      v413(string.format("[Lava] ambil drop di (%d,%d)...", v802, v809));
+      if v810 then
+        v434(v802, v809);
+      else
+        v377.on=false;
+        for v1752=1, v808-1 do
+          local v1753=0;
+          while true do
+            if(v1753==0)then
+              v433(v802, v806[v1752]);
+              task.wait(0.15);
+              break;
+            end
+          end
+        end
+        v433(v802, v809);
+        task.wait(0.35);
+      end
+      v1312=1;
+    end
+    if(v1312==1)then
+      v1313=os.clock();
+      while not v412 and v435()and((os.clock()-v1313)<1.5)do
+        local v1656=0;
+        while true do
+          if(v1656==0)lalu jika bukan v810 maka v433(v802, v809);
+          akhir tugas.tunggu(0.2);
+          break;
+          akhir akhir akhir break;
+          akhir akhir akhir v377.on=false;
+          v413(string.format("[Lava] TP balik ke (%d,%d)...", v804, v805));
+          v433(v804, v805);
+          tugas.tunggu(0.25);
+          v433(v804, v805);
+          tugas.tunggu(0.45);
+          untuk v1166=v808, 1,-1 lakukan jika v412 maka lokal v1402=0;
+          selama benar lakukan jika(v1402==0)maka v377.on=false;
+          kembalikan false;
+          akhir akhir akhir lokal v1167=v806[v1166];
+          lokal v1168=(v1167-v805)>2;
+          if v1168 then
+            v434(v802, v1167-1);
+          else
+            v377.on=false;
+            v433(v804, v805);
+            task.wait(0.15);
+          end
+          v413(string.format("[Lava] pasang dirt di (%d,%d)...", v802, v1167));
+          for v1314=1, 3 do
+            v428:FireServer("fg", v802, v1167, 2);
+            task.wait(0.25);
+          end
+          v447(v802, v1167, "fg", 2);
+          v373[v441("fg", v802, v1167)]=nil;
+          if(v1166==1)then
+            v375[v441("fg", v802, v1167)]=true;
+          else
+            v375[v441("fg", v802, v1167)]=nil;
+          end
+        end
+        v377.on=false;
+        v433(v804, v805);
+        task.wait(0.2);
+        v433(v804, v805);
+        task.wait(0.2);
+        v413(string.format("[Lava] selesai di (%d,%d): %d tile", v802, v803, v808));
+        return true;
+      end
+      local function v464(v812, v813)local v814, v815=pcall(v463, v812, v813);
+        v377.on=false;
+        if not v814 then
+          v376[v441("fg", v812, v813)]=true;
+          v413("[Lava] error: " .. tostring(v815));
+          return false;
+        end
+        return v815;
+        akhir fungsi lokal v465(v817, v818, v819)lokal v820=0;
+        lokal v821;
+        lokal v822;
+        selama benar lakukan jika(v820==1)maka v822=false;
+        untuk v1509=0, 2 lakukan jika v412 maka berhenti;
+        akhir lokal v1510=v817+(v1509*v819);
+        jika((v1510>=0)dan(v1510<=99))maka lokal v1658=0;
+        lokal v1659;
+        selama benar lakukan jika(v1658==0)maka v1659=v441("fg", v1510, v821);
+        if((v442("fg", v1510, v821)==4)and not v375[v1659]and not v376[v1659])then
+          v464(v1510, v821);
+          v822=true;
+        end
+        break;
+      end
+    end
+  end
+end
+v820=2;
+end
+if(v820==0)then
+  if not v440.lavaOn then
+    return false;
+  end
+  v821=v818+1;
+  v820=1;
+end
+if(2==v820)then
+  return v822;
+end
+end
+end
+local function v466(v823)local v824=0;
+  while true do
+    if(v824==0)then
+      v385.Text=(v823 dan "BERHENTI")atau "MULAI";
+      v25(v385, 0.2,{BackgroundColor3=(v823 dan v16.RED)atau v16.acc});
+      v824=1;
+    end
+    if(v824==1)then
+      v380.BackgroundColor3=(v823 dan v16.ON)atau v16.RED;
+      v381.Text=(v823 dan "Berjalan...")atau "Siap";
+      break;
+    end
+  end
+end
+local function v467(v825)local v826=0;
+  local v827;
+  while true do
+    if(v826==1)then
+      return v827;
+    end
+    if(v826==0)then
+      v827={};
+      for v1511 in tostring(v825):gmatch("%d+")do
+        v827[tonumber(v1511)]=true;
+      end
+      v826=1;
+    end
+  end
+end
+local function v468()local v828={yFrom=math.floor(tonumber(v387.Text)or 38), yTo=math.floor(tonumber(v388.Text)or 52), step=math.max(math.floor(tonumber(v391.Text)or 2), 1), x0=math.clamp(math.floor(tonumber(v389.Text)or 0), 0, 99), x1=math.clamp(math.floor(tonumber(v390.Text)or 99), 0, 99), hits=math.clamp(math.floor(tonumber(v395.Text)or 3), 1, 8), rockHits=math.clamp(math.floor(tonumber(v396.Text)or 8)), 1, 20), lavaHits=math.clamp(math.floor(tonumber(v397.Text)or 3)), 1, 10), lavaDeep=math.clamp(math.floor(tonumber(v399.Text)or 3), 0), 4), reach=math.clamp(math.floor(tonumber(v398.Text)or 2), 1, 3), body=math.clamp(math.floor(tonumber(v392.Text)or 1), 1, 2), lavaOn=v400.get(), hover=v401.get(), tp=v404.get(), collect=v405.get(), mem=v403.get(), bgOn=v402.get(), edgeBuild=v406.get(), takeX=math.clamp(math.floor(tonumber(v407.Text)or 50), 0, 99), takeY=math.floor(tonumber(v408.Text)or 36), minDirt=math.max(math.floor(tonumber(v409.Text)or 20), 1), takeWait=math.max(tonumber(v410.Text)or 3, 0.5), ids=v467(v393.Text), bgIds=v467(v394.Text)};
+  if(v828.x0>v828.x1)then
+    v828.x0, v828.x1=v828.x1, v828.x0;
+  end
+  return v828;
+end
+local v469=2;
+local v470=35;
+local v471=36;
+local v472=1;
+local function v473(v829, v830)local v831=0;
+  local v832;
+  while true do
+    if(0==v831)then
+      v453();
+      v433(v829, v830);
+      v831=1;
+    end
+    if(v831==3)then
+      return not v412;
+    end
+    if(v831==2)then
+      v832=os.clock();
+      while not v412 and((os.clock()-v832)<v472)do
+        task.wait(0.05);
+      end
+      v831=3;
+    end
+    if(v831==1)then
+      task.wait(0.2);
+      v433(v829, v830);
+      v831=2;
+    end
+  end
+end
+local function v474(v833, v834, v835)v835=v835 or 35;
+  local v836=os.clock();
+  local v837, v838, v839=v13.x, v13.y, os.clock();
+  while not v412 and((os.clock()-v836)<v835)do
+    local v1170=0;
+    local v1171;
+    local v1172;
+    local v1173;
+    while true do
+      if(v1170==3)then
+        if((math.abs(v13.x-v837)+math.abs(v13.y-v838))>0.03)then
+          v837, v838, v839=v13.x, v13.y, os.clock();
+        elseif((os.clock()-v839)>0.5)then
+          local v1754=0;
+          while true do
+            if(v1754==0)then
+              v455();
+              v839=os.clock();
+              break;
+            end
+          end
+        end
+        break;
+      end
+      if(v1170==0)maka v1171, v1172=v430(v13.x, v13.y);
+      v1173=(v833+0.5)-v13.x;
+      v1170=1;
+      akhir jika(v1170==1)maka jika((v1171==v833)dan(v1172==v834)dan(math.abs(v1173)<0.3))maka lokal v1662=0;
+      lokal v1663;
+      lokal v1664;
+      selama benar lakukan jika(v1662==1)maka v1663, v1664=v430(v13.x, v13.y);
+      jika((v1663==v833)dan(v1664==v834))maka kembali benar;
+      akhir break;
+      akhir jika(v1662==0)maka v453();
+      tugas.tunggu(0.1);
+      v1662=1;
+      akhir akhir akhir jika(math.abs(v1173)>0.12)maka v454(((v1173>0)dan v450)atau v449);
+    else
+      v453();
+      akhir v1170=2;
+      akhir jika(v1170==2)maka jika((v1171==v833)dan(v1172>v834))maka v455();
+      akhir tugas.tunggu(0.03);
+      v1170=3;
+      akhir akhir akhir v453();
+      lokal v840, v841=v430(v13.x, v13.y);
+      kembalikan(v840==v833)dan(v841==v834);
+      akhir fungsi lokal v475()v453();
+      v413("Respawn kembali ke (50, 36)...");
+      v416();
+      lokal v842=os.clock();
+      selama bukan v412 dan((os.clock()-v842)<2.5)lakukan lokal v1174, v1175=v430(v13.x, v13.y);
+      jika((v1175<=36)dan(math.abs(v1174-50)<=6))maka hentikan;
+      akhir tugas.tunggu(0.1);
+      akhir tugas.tunggu(0.35);
+      jika v412 maka kembalikan false;
+      akhir kembalikan v474(50, 36, 20);
+      akhir fungsi lokal v476(v843, v844)jika(v442("fg", v843, v844)~=0)maka kembalikan "lewati";
+      akhir untuk v1176=1, 3 lakukan lokal v1177=0;
+      lokal v1178;
+      selama benar lakukan jika(v1177==1)maka pcall(fungsi()v427:FireServer(v74(v469, v843+0.5, v844+0.5));
+      akhir);
+      v1178=os.clock();
+      v1177=2;
+    end
+    if(v1177==0)then
+      if v412 then
+        return "cancel";
+      end
+      pcall(function()v428:FireServer("fg", v843, v844, v469, false);
+      end
+      );
+      v1177=1;
+    end
+    if(v1177==2)then
+      while(os.clock()-v1178)<0.3 do
+        if(v442("fg", v843, v844)~=0)then
+          break;
+        end
+        task.wait(0.05);
+      end
+      if(v442("fg", v843, v844)~=0)then
+        local v1665=0;
+        while true do
+          if(v1665==0)then
+            v425();
+            return "ok";
+          end
+        end
+      end
+      break;
+    end
+  end
+end
+v447(v843, v844, "fg", v469);
+v425();
+return "ok";
+end
+local function v477(v845)local v846=0;
+  local v847;
+  local v848;
+  while true do
+    if(v846==1)then
+      return v847;
+    end
+    if(0==v846)then
+      v847, v848={}, 0;
+      for v1513=35, 1,-2 do
+        local v1514=(v848%2)==0;
+        local v1515;
+        if(v845=="L")then
+          v1515=(v1514 and 1)or 0;
+        else
+          v1515=(v1514 and 98)atau 99;
+          akhir v847[#v847+1]={v1515, v1513};
+          v848=v848+1;
+          akhir v846=1;
+          akhir akhir akhir fungsi lokal v478()lokal v849={ok=0, skip=0, refill=0};
+          lokal v850=false;
+          task.spawn(fungsi()sementara bukan v412 dan bukan v850 lakukan lokal v1318=0;
+          sementara benar lakukan jika(v1318==0)maka v423(benar);
+          task.wait(3);
+          break;
+          akhir akhir akhir akhir);
+          lokal fungsi v851()lokal v1179=0;
+          lokal v1180;
+          lokal v1181;
+          lokal v1182;
+          lokal v1183;
+          selama benar lakukan jika(v1179==1)maka v1182=((v1180<=50)dan 3)atau 96;
+          v413(string.format("Turun dari menara (%d,%d) dengan jalan kaki...", v1180, v1181));
+          v1179=2;
+          akhir jika(v1179==2)maka v1183=os.clock();
+          selama bukan v412 dan((os.clock()-v1183)<8)lakukan lokal v1572, v1573=v430(v13.x, v13.y);
+          if(v1573>=v471)then
+            break;
+          end
+          local v1574=(v1182+0.5)-v13.x;
+          if(math.abs(v1574)>0.1)then
+            v454(((v1574>0)and v450)or v449);
+          else
+            v453();
+          end
+          task.wait(0.04);
+        end
+        v1179=3;
+      end
+      if(v1179==0)then
+        v1180, v1181=v430(v13.x, v13.y);
+        if(v1181>=v471)then
+          return true;
+        end
+        v1179=1;
+      end
+      if(v1179==3)then
+        v453();
+        return not v412;
+      end
+    end
+  end
+  local function v852(v1184, v1185, v1186)local v1187=0;
+    local v1188;
+    while true do
+      if(v1187==1)then
+        v413(string.format("Jalan kembali ke bawah menara (%d, %d)...", v1188, v471));
+        if not v474(v1188, v471, 45)then
+          v413(string.format("Gagal jalan ke (%d, %d). Berhenti.", v1188, v471));
+          return false;
+        end
+        v1187=2;
+      end
+      if(v1187==2)then
+        for v1575=1, v1186-1 lakukan jika v412 maka kembalikan false;
+        akhir lokal v1576=v1185[v1575];
+        lokal v1577, v1578=v1576[1], v1576[2]-1;
+        v413(string.format("TP bertahap [%d/%d] ke (%d, %d)...", v1575, v1186-1, v1577, v1578));
+        jika bukan v473(v1577, v1578)maka kembalikan false;
+        akhir akhir kembalikan bukan v412;
+        akhir jika(v1187==0)maka v1188=((v1184=="L")dan 0)atau 99;
+        jika(v1186<=1)maka lokal v1666=0;
+        selama benar lakukan jika(v1666==0)maka v413(string.format("Jalan kembali ke (%d, %d)...", v1185[1][1], v471));
+        return v474(v1185[1][1], v471, 45);
+      end
+    end
+  end
+  v1187=1;
+end
+end
+end
+local function v853(v1189)local v1190=0;
+  local v1191;
+  while true do
+    if(v1190==1)then
+      return not v412;
+    end
+    if(v1190==0)then
+      v1191=v423(false);
+      if((v1191~=nil)and(v1191<v440.minDirt))then
+        local v1667=0;
+        local v1668;
+        local v1669;
+        while true do
+          if(v1667==3)then
+            v1669=v423(true);
+            v413(string.format("[Ambil Dirt] Selesai ambil (Dirt sekarang: %s), kembali ke posisi kerja...", tostring(v1669 or "?")));
+            v1667=4;
+          end
+          if(v1667==2)then
+            v1668=os.clock();
+            while not v412 and(((os.clock()-v1668)<v440.takeWait)or((v423(true)or 0)<v440.minDirt))do
+              if((os.clock()-v1668)>math.max(v440.takeWait+8, 12))then
+                break;
+              end
+              task.wait(0.25);
+            end
+            v1667=3;
+          end
+          if(v1667==1)then
+            v851();
+            if not v474(v440.takeX, v440.takeY, 45)then
+              local v1846=0;
+              while true do
+                if(v1846==0)then
+                  v413("Gagal jalan ke tempat ambil dirt. Berhenti.");
+                  return false;
+                end
+              end
+            end
+            v1667=2;
+          end
+          if(v1667==4)then
+            if(v1189 and not v1189())then
+              return false;
+            end
+            break;
+          end
+          if(0==v1667)then
+            v849.refill=v849.refill+1;
+            v413(string.format("[Ambil Dirt] Dirt di backpack sisa %d (< %d) -> jalan ke (%d,%d)...", v1191, v440.minDirt, v440.takeX, v440.takeY));
+            v1667=1;
+          end
+        end
+      end
+      v1190=1;
+    end
+  end
+end
+local function v854(v1192, v1193, v1194)local v1195=0;
+  local v1196;
+  while true do
+    if(v1195==1)then
+      v1196=v476(v1192, v1193);
+      if(v1196=="ok")then
+        v849.ok=v849.ok+1;
+        v421=v423(v421 and math.max(v421-1, 0));
+        v413(string.format("Pasang Kotoran (%d,%d) | terpasang %d | lewati %d | ambil %d | ransel: %s", v1192, v1193, v849.ok, v849.skip, v849.refill, tostring(v421 or "?")));
+        return true;
+      elseif(v1196=="skip")then
+        v849.skip=v849.skip+1;
+        return true;
+      end
+      v1195=2;
+    end
+    if(v1195==2)then
+      return false;
+    end
+    if(v1195==0)then
+      if(v442("fg", v1192, v1193)~=0)then
+        local v1671=0;
+        while true do
+          if(v1671==0)then
+            v849.skip=v849.skip+1;
+            return true;
+          end
+        end
+      end
+      if not v853(v1194)then
+        return false;
+      end
+      v1195=1;
+    end
+  end
+end
+local function v855(v1197)local v1198=v477(v1197);
+  local v1199=v1198[1];
+  v413(string.format("Kolom %s: jalan ke (%d,%d)...",((v1197=="L")and "kiri")or "kanan", v1199[1], v471));
+  if not v474(v1199[1], v471, 45)lalu lokal v1409=0;
+  selama benar lakukan jika(v1409==0)maka v413(string.format("Gagal jalan ke (%d,%d). Berhenti.", v1199[1], v471));
+  kembalikan false;
+  akhir akhir akhir untuk v1319, v1320 dalam ipairs(v1198)lakukan lokal v1321=0;
+  lokal v1322;
+  lokal v1323;
+  selama benar lakukan jika(v1321==2)maka jika bukan v854(v1320[1], v1320[2], v1323)kemudian kembalikan false;
+  akhir tugas.tunggu(0.12);
+  break;
+  akhir jika(v1321==1)maka v1322=v1319;
+  fungsi v1323()kembalikan v852(v1197, v1198, v1322);
+  akhir v1321=2;
+  akhir jika(v1321==0)maka jika v412 maka kembalikan false;
+  akhir jika(v1319>1)maka lokal v1701=v1198[v1319-1];
+  v413(string.format("TP ke (%d,%d) -> pasang (%d,%d)", v1701[1], v1701[2]-1, v1320[1], v1320[2]));
+  if not v473(v1701[1], v1701[2]-1)then
+    return false;
+  end
+end
+v1321=1;
+end
+end
+end
+return true;
+end
+local function v856()local v1200=0;
+  local v1201;
+  while true do
+    if(v1200==0)then
+      v851();
+      v413(string.format("Baris %d: jalan ke (2,%d)...", v470, v471));
+      v1200=1;
+    end
+    if(v1200==1)then
+      v1201=0;
+      untuk v1579=2, 97 lakukan lokal v1580=0;
+      selama benar lakukan jika(v1580==0)maka jika v412 maka kembalikan false;
+      akhir jika(v442("fg", v1579, v470)==0)maka lokal v1820=0;
+      lokal v1821;
+      selama benar lakukan jika(0==v1820)maka fungsi v1821()kembalikan v474(v1579, v471, 40);
+      akhir jika v1821()maka lokal v1892=0;
+      selama benar lakukan jika(v1892==0)maka v1201=0;
+      jika bukan v854(v1579, v470, v1821)maka kembalikan false;
+      akhir break;
+      akhir akhir jika tidak lokal v1893=0;
+      while true do
+        if(v1893==0)then
+          v1201=v1201+1;
+          if(v1201>=4)then
+            local v1908=0;
+            while true do
+              if(v1908==0)then
+                v413("Gagal jalan 4x berturut-turut di baris 35. Berhenti.");
+                return false;
+              end
+            end
+          end
+          break;
+        end
+      end
+    end
+    break;
+  end
+end
+else
+  v849.skip=v849.skip+1;
+end
+break;
+end
+end
+end
+v1200=2;
+end
+if(v1200==2)then
+  return true;
+end
+end
+end
+if not v475()then
+  local v1324=0;
+  while true do
+    if(0==v1324)then
+      v850=true;
+      return false, v849;
+    end
+  end
+end
+local v857=v855("L");
+if(v857 and not v412)then
+  local v1325=0;
+  while true do
+    if(v1325==0)then
+      v851();
+      v857=v855("R");
+      break;
+    end
+  end
+end
+if(v857 and not v412)then
+  v857=v856();
+end
+v850=true;
+v453();
+return v857, v849;
+end
+v68(v371, "Pasang Dirt Tepi & Baris 35 Saja", function()if v411 then
+  local v1326=0;
+  while true do
+    if(0==v1326)then
+      v56("Auto DF sedang berjalan!", v16.RED);
+      return;
+    end
+  end
+end
+task.spawn(function()jika tidak(v13.x dan v13.y)maka lokal v1410=0;
+  sementara true do
+    if(v1410==1)lalu return;
+  end
+  if(v1410==0)maka v413("Posisi belum terbaca. Gerakkan karakter dulu.");
+  v56("Auto DF: posisi belum terbaca", v16.RED);
+  v1410=1;
+end
+end
+end
+jika tidak v429()maka v413("Remote tidak ketemu");
+v56("Auto DF: remote tidak ketemu", v16.RED);
+return;
+end
+v436=nil;
+jika tidak v439()maka v413("Peta tidak terbaca: " .. tostring(getgenv().WorldMengapa));
+v56("DF Otomatis: peta tidak terbaca", v16.RED);
+return;
+end
+v440=v468();
+v411, v412=true, false;
+v466(true);
+v56("Mulai pasang Dirt Tepi & Baris 35", v16.ON);
+local v1202, v1203=v478();
+v411=false;
+v466(false);
+v413(string.format("%s\nKotoran terpasang: %d | lewati: %d | ambil: %d",(v412 dan "Dihentikan.")atau(v1202 dan "SELESAI PASANG TEPI & BARIS 35.")atau "Berhenti (ada kendala).", v1203.ok, v1203.skip, v1203.refill));
+v56((v412 dan "Dihentikan")atau "Pasang Dirt Tepi selesai!",(v412 and v16.YEL)or v16.ON);
+end
+);
+end
+, v16.card2);
+v68(v371, "Cek Jumlah Dirt di Backpack & Posisi", function()local v858=v423(true);
+  local v859=(v13.x and v13.y and string.format("Sel (%d, %d)", math.floor(v13.x), math.floor(v13.y-0.001)))or "belum terbaca";
+  v413(string.format("Kotoran (ID 2) di ransel: %s\nPosisi sekarang: %s", tostring(v858 or "tidak terbaca"), v859));
+  v56("Kotoran di ransel: " .. tostring(v858 or "?"), v16.acc2);
+end
+, v16.card2);
+v68(v371, "Lupakan riwayat ubin", function()for v1204 in pairs(v373)do
+  v373[v1204]=nil;
+end
+for v1206 in pairs(v375)do
+  v375[v1206]=nil;
+end
+for v1208 in pair(v376)do
+  v376[v1208]=nil;
+end
+v413("Riwayat tile dihapus.");
+v56("Riwayat tile dihapus", v16.YEL);
+end
+, v16.card2);
+v69(v371, "Berdirilah di permukaan sebelum menekan MULAI. Gerakkan karakter sedikit agar posisi terbaca.");
+local function v479()if v411then return;
+end
+if not(v13.x dan v13.y)lalu v413("Posisi belum terbaca. Gerakkan karakter dulu.");
+v56("Auto DF: posisi belum terbaca", v16.RED);
+return;
+end
+if not v429()then
+  v413("Remote tidak ketemu");
+  v56("Auto DF: remote tidak ketemu", v16.RED);
+  return;
+end
+v436=nil;
+if not v439()then
+  v413("Peta tidak terbaca: " .. tostring(getgenv().WorldWhy));
+  v56("Auto DF: peta tidak terbaca", v16.RED);
+  return;
+end
+v440=v468();
+for v1210 in pairs(v376)do
+  v376[v1210]=nil;
+end
+v411, v412=true, false;
+v466(true);
+v415(0);
+v56("Auto DF dimulai", v16.ON);
+local v860={};
+for v1212=v440.yFrom, v440.yTo, v440.step do
+  v860[#v860+1]=v1212;
+end
+local v861=(v440.x1-v440.x0)+1;
+local v862=math.max(#v860*v861, 1);
+local v863, v864, v865, v866, v867, v868, v869=0, 0, 0, 0, 0, 0, 0;
+local v870=(((v13.x-v440.x0)<(v440.x1-v13.x))and 1)or-1;
+local v871, v872, v873, v874;
+local function v875(v1214, v1215)v413(string.format("Baris y%d | x%d (%d/%d)\nblok %d | tambal %d | cave %d | gagal %d", v1214, v1215, math.min(math.floor(v863/v861)+1, #v860), #v860, v864, v866, v865, v868));
+end
+for v1216, v1217 in ipairs(v860)do
+  if v412 then
+    break;
+  end
+  local v1218=v1217-v440.reach;
+  local v1219, v1220=v440.x0, v440.x1;
+  if(v870==-1)then
+    v1219, v1220=v440.x1, v440.x0;
+  end
+  v871, v872, v873, v874=v1219, v1220, v870, v1217;
+  if(v1216==1)maka v413("menuju titik awal...");
+  if v465(v1219, v1218, v870)maka v866=v866+1;
+end
+if not v457(v1219, v1218)then
+  v413("Tidak bisa mencapai titik awal (" .. v1219 .. "," .. v1218 .. ").Berdirilah di permukaan, lalu coba lagi.");
+  break;
+end
+end
+for v1327=v1219, v1220, v870 do
+  if v412 then
+    break;
+  end
+  if v465(v1327, v1218, v870)then
+    v866=v866+1;
+  end
+  local v1328=v444(v1327, v1217);
+  local v1329=v443("bg", v1327, v1217);
+  local v1330=v1328 and(v1328>0)and(v440.ids[v1328]==true);
+  local v1331=not v1328 or(v1328==0)or v1330;
+  local v1332=v440.bgOn and v1329 and(v1329>0)dan(v440.bgIds[v1329]==true)dan v1331;
+  jika(v1330 atau v1332)maka jika v457(v1327, v1218)maka jika v465(v1327, v1218, v870)maka lokal v1756=0;
+  selama benar lakukan jika(v1756==0)maka v866=v866+1;
+  v457(v1327, v1218);
+  break;
+  akhir akhir akhir lokal v1672=v444(v1327, v1217);
+  jika(v1330 dan v1672 dan(v1672>0)dan v440.ids[v1672])maka lokal v1757=0;
+  while true do
+    if(0==v1757)then
+      v460(v1327, v1217, "fg", v1672);
+      v864=v864+1;
+      v1757=1;
+    end
+    if(v1757==1)then
+      task.wait(0.15);
+      break;
+    end
+  end
+end
+if v1332 then
+  local v1758=0;
+  while true do
+    if(v1758==0)then
+      v460(v1327, v1217, "bg", v1329);
+      v865=v865+1;
+      break;
+    end
+  end
+end
+v869=0;
+else
+  v868=v868+1;
+  v869=v869+1;
+  if(v869>=6)then
+    local v1759=0;
+    while true do
+      if(0==v1759)then
+        v413("Gagal 6x berturut-turut. Berhenti. Cek apakah karakternyangkut.");
+        v412=true;
+        break;
+      end
+    end
+  end
+end
+else
+  v867=v867+1;
+end
+v863=v863+1;
+if((v863%3)==0)then
+  local v1517=0;
+  while true do
+    if(v1517==0)then
+      v415(v863/v862);
+      v875(v1217, v1327);
+      break;
+    end
+  end
+end
+end
+if v412 then
+  break;
+end
+if(v1216<#v860)then
+  local v1413=v860[v1216+1]-v440.reach;
+  if v457(v1220, v1218)then
+    local v1581=0;
+    while true do
+      if(v1581==1)then
+        if not v457(v1220, v1413)then
+          local v1823=0;
+          while true do
+            if(v1823==0)then
+              v413("Gagal turun ke baris berikutnya. Berhenti.");
+              v412=true;
+              break;
+            end
+          end
+        end
+        break;
+      end
+      if(v1581==0)then
+        for v1800=v1218+1, v1413-1 do
+          if v445(v1220, v1800)then
+            v460(v1220, v1800, "fg", v444(v1220, v1800));
+          end
+        end
+        v465(v1220, v1413,-v870);
+        v1581=1;
+      end
+    end
+  else
+    local v1582=0;
+    while true do
+      if(v1582==0)then
+        v413("Gagal ke ujung baris untuk turun. Berhenti.");
+        v412=true;
+        break;
+      end
+    end
+  end
+  v870=-v870;
+end
+end
+if(not v412 and v440.collect and v874)then
+  local v1333=0;
+  local v1334;
+  while true do
+    if(1==v1333)then
+      if v457(v872, v1334)then
+        local v1702=0;
+        while true do
+          if(v1702==0)kemudian untuk v1847=v1334+1, v874-1 lakukan jika v445(v872, v1847)maka v460(v872, v1847, "fg", v444(v872, v1847));
+          akhir akhir jika v457(v872, v874)maka untuk v1867=v872, v871,-v873 lakukan jika v412 maka hentikan;
+          akhir v457(v1867, v874);
+          akhir akhir hentikan;
+          akhir akhir akhir hentikan;
+          akhir jika(v1333==0)maka v413("menyusuri baris terakhir untuk mengambil drop...");
+          v1334=v874-v440.reach;
+          v1333=1;
+          akhir akhir akhir v377.on=false;
+          v453();
+          lokal v877="";
+          jika(bukan v412 dan v440.edgeBuild)maka v413("Gali selesai! Lanjut Respawn ke (50,36) & pasang Dirt Tepi + Baris 35...");
+          local v1335, v1336=v478();
+          v877=string.format(" | tepi/35: %d (ambil %dx)", v1336.ok, v1336.refill);
+        end
+        v415((v412 and(v863/v862))or 1);
+        v411=false;
+        v413(string.format("%s\nblok %d | tambal %d | cave %d | gagal %d%s",(v412 and "Dihentikan.")or "SELESAI.", v864, v866, v865, v868, v877));
+        v56((v412 and "Auto DF")or "Auto DF selesai!",(v412 and v16.YEL)or v16.ON);
+        v466(false);
+      end
+      getgenv().DFApi={init=function()if v411then return false, "Auto DF sedang berjalan, hentikan dulu";
+      end
+      if not(v13.x and v13.y)then
+        return false, "Posisi belum terbaca. Gerakkan karakter dulu.";
+      end
+      if not v429()then
+        return false, "Remote tidak ketemu";
+      end
+      v436=nil;
+      if not v439()then
+        return false, "Peta tidak terbaca: " .. tostring(getgenv().WorldWhy);
+      end
+      v440=v468();
+      v412=false;
+      for v1221 in pairs(v376)do
+        v376[v1221]=nil;
+      end
+      return true;
+    end
+    , plan=v462, resolve=v464, rawId=function(v878, v879)return v442("fg", v878, v879);
+    end
+    , isPatched=function(v880, v881)return v375[v441("fg", v880, v881)]==true;
+    end
+    , stop=function()v412=true;
+      v377.on=false;
+      v453();
+    end
+    , isBusy=function()return v411;
+    end
+    };
+    getgenv().DFStop=function()v412=true;
+      v377.on=false;
+      v377.dead=true;
+      v453();
+    end
+    v385.Activated:Connect(function()if v411 then
+      v412=true;
+    else
+      task.spawn(v479);
+    end
+  end
+  );
+  v28[#v28+1]=function(v885)local v886=0;
+    while true do
+      if(v886==0)then
+        v412=true;
+        v377.on=false;
+        v886=1;
+      end
+      if(v886==1)then
+        if v885 then
+          v377.dead=true;
+        end
+        v453();
+        break;
+      end
+    end
+  end
+end
+)();(function()local v483=v63("Clear World", "🌍", "Bersihkan seluruh blok & cave background • v" .. v2);
+  v64(v483, "Kontrol");
+  local v484=v20("Frame",{Size=UDim2.new(1, 0, 0, 0), AutomaticSize=Enum.AutomaticSize.Y, BackgroundColor3=v16.card, LayoutOrder=v61()}, v483);
+  v21(v484, 10);
+  v24(v484, 10, 10, 10, 10);
+  v20("UIListLayout",{Padding=UDim.new(0, 8), SortOrder=Enum.SortOrder.LayoutOrder}, v484);
+  local v485=v20("Frame",{Size=UDim2.new(1, 0, 0, 16), BackgroundTransparency=1, LayoutOrder=1}, v484);
+  local v486=v20("Frame",{Size=UDim2.new(0, 8, 0, 8), Position=UDim2.new(0, 0, 0.5,-4), BackgroundColor3=v16.RED}, v485);
+  v21(v486, 4);
+  local v487=v20("TextLabel",{Size=UDim2.new(1,-60, 1, 0), Position=UDim2.new(0, 14, 0, 0), BackgroundTransparency=1, Text="Siap", TextColor3=v16.wh, TextSize=12, Font=v17.b, TextXAlignment=v18}, v485);
+  local v488=v20("TextLabel",{Size=UDim2.new(0, 50, 1, 0), Position=UDim2.new(1,-50, 0, 0), BackgroundTransparency=1, Text="0%", TextColor3=v16.acc2, TextSize=12, Font=v17.b, TextXAlignment=v19}, v485);
+  local v489=v20("Frame",{Size=UDim2.v489=v20("Frame",{Size=UDim2.new(1, 0, 0, 8), BackgroundColor3=v16.bg, LayoutOrder=2}, v484);
+  v21(v489, 4);
+  local v490=v20("Frame",{Size=UDim2.new(0, 0, 1, 0), BackgroundColor3=v16.wh}, v489);
+  v21(v490, 4);
+  v23(v490, v16.acc, v16.acc2);
+  local v491=v20("TextButton",{Size=UDim2.new(1, 0, 0, 36), BackgroundColor3=v16.acc, Text="MULAI CLEAR WORLD", AutoButtonColor=false, TextColor3=v16.wh, TextSize=13, Font=v17.b, LayoutOrder=3}, v484);
+  v21(v491, 9);
+  v26(v491);
+  local v492=v20("TextLabel",{Size=UDim2.new(1, 0, 0, 66), BackgroundColor3=v16.bg, LayoutOrder=4, Text="Berdirilah di permukaan (y=36) & gerakkan karakter sedikit sebelum mulai.", TextColor3=v16.dm, TextSize=11, Font=v17.r, TextWrapped=true, TextXAlignment=v18, TextYAlignment=Enum.TextYAlignment.Top}, v484);
+  v21(v492, 8);
+  v24(v492, 6, 8, 8, 6);
+  v64(v483, "Area Bersih");
+  local v493, v494=v67(v483, "Baris mulai (y)", 36, "Baris akhir (y)", 53);
+  local v495, v496=v67(v483, "Kolom dari x", 0, "Kolom sampai x", 99);
+  v64(v483, "Pukulan per Blok");
+  local v497, v498=v67(v483, "Pukulan Cane (954)", 2, "Kotoran/Lava/Gua (2,4,14)", 3);
+  local v499=v67(v483, "Pukulan Rock (10)", 8);
+  v64(v483, "Auto Trash / Recycle Seed & Item");
+  local v500, v501=v67(v483, "ID Seed/Item (pisah koma)", "3, 11, 5, 15", "Trash jika jumlah >=", 50);
+  local v502, v503=v67(v483, "Jumlah di-trash (0=Semua)", 0, "Cek tiap (detik)", 3);
+  local function v504(v887)local v888={};
+    for v1223 in tostring(v887):gmatch("%d+")do
+      v888[#v888+1]=tonumber(v1223);
+    end
+    return v888;
+  end
+  local function v505(v889)local v890=0;
+    local v891;
+    local v892;
+    local v893;
+    local v894;
+    local v895;
+    local v896;
+    while true do
+      if(0==v890)then
+        v891, v891, v891, v891, v892=v73();
+        if not v892 then
+          local v1584=0;
+          while true do
+            if(v1584==0)then
+              v53("Remote Recycle tidak ditemukan!", v16.RED);
+              if not v889 then
+                v56("Trash: Remote Recycle tidak ditemukan!", v16.RED);
+              end
+              v1584=1;
+            end
+            if(v1584==1)then
+              return 0;
+            end
+          end
+        end
+        v890=1;
+      end
+      if(v890==1)then
+        v893=v504(v500.Text);
+        v894=math.max(math.floor(tonumber(v501.Text)or 1), 1);
+        v890=2;
+      end
+      if(v890==2)then
+        v895=math.floor(tonumber(v502.Text)or 0);
+        v896=0;
+        v890=3;
+      end
+      if(v890==3)then
+        v77(true);
+        for v1518, v1519 in ipairs(v893)do
+          local v1520=v78(v1519, false)or 0;
+          if(v1520>=v894)then
+            local v1673=0;
+            local v1674;
+            while true do
+              if(1==v1673)then
+                v79(v1519, v1674);
+                v896=v896+v1674;
+                v1673=2;
+              end
+              if(2==v1673)then
+                v53(string.format("ID Daur Ulang %dx%d (dari %d)", v1519, v1674, v1520), v16.ON);
+                task.wait(0.15);
+                break;
+              end
+              if(v1673==0)then
+                v1674=((v895>0)and math.min(v895, v1520))or v1520;
+                v892:FireServer(v1519, v1674);
+                v1673=1;
+              end
+            end
+          end
+        end
+        v890=4;
+      end
+      if(v890==4)then
+        if((v896==0)and not v889)then
+          local v1585=0;
+          while true do
+            if(v1585==0)then
+              v53("Cek Trash selesai: belum ada item >=" .. v894, v16.dm);
+              v56("Trash: belum ada item yang mencapai batas >=" .. v894, v16.YEL);
+              break;
+            end
+          end
+        elseif((v896>0)and not v889)then
+          v56("Total daur ulang " .. v896 .. " item!", v16.ON);
+        end
+        return v896;
+      end
+    end
+  end
+  v68(v483, "Sampah / Daur Ulang Sekarang (Sekali)", function()task.spawn(v505, false);
+  end
+  , v16.card2);
+  local v506, v507=false, 0;
+  local v508;
+  v508=v65(v483, "Sampah Otomatis Berkala (Daur Ulang Otomatis)", false, function(v897)v506=v897;
+    v507=v507+1;
+    local v898=v507;
+    if not v897 then
+      v53("Sampah Otomatis berhenti", v16.YEL);
+      return;
+    end
+    v56("Auto Trash Berkala aktif", v16.ON);
+    sementara v506 dan(v898==v507)dan v31.Parent melakukan local v1225=0;
+    sementara true melakukan if(v1225==0)lalu v505(true);
+    task.wait(math.max(tonumber(v503.Text)or 3, 1));
+    break;
+  end
+end
+end
+end
+);
+v69(v483, "Karakter berjalan normal (tanpa TP), berdiri di (x+2, y-1) untuk menghancurkan 2 blok di belakangnya dengan verifikasi scan. Khusus saat ada Lava di pijakan, otomatis TP ke atas samping lava, break lava & pasang Dirt.");
+local v509, v510=false, false;
+local function v511(v899)v899=tostring(v899);
+  v492.Text=v899;
+  v53("Bersihkan Dunia: " ..(v899:match("^[^\n]*")atau v899),(v509 dan v16.ON)atau v16.dm);
+end
+local function v512(v901)v901=math.clamp(v901, 0, 1);
+  v25(v490, 0.2,{Size=UDim2.new(v901, 0, 1, 0)});
+  v488.Text=math.floor((v901*100)+0.5).. "%";
+end
+local function v513(v903)local v904=0;
+  while true do
+    if(v904==0)then
+      v491.Text=(v903 and "BERHENTI")or "MULAI CLEAR WORLD";
+      v25(v491, 0.2,{BackgroundColor3=(v903 and v16.RED)or v16.acc});
+      v904=1;
+    end
+    if(v904==1)then
+      v486.BackgroundColor3=(v903 and v16.ON)or v16.RED;
+      v487.Text=(v903 and "Berjalan...")or "Siap";
+      break;
+    end
+  end
+end
+local v514, v515, v516;
+local function v517()local v905=0;
+  local v906;
+  while true do
+    if(v905==0)then
+      for v1521, v1522 dalam ipairs(v4:GetDescendants())lakukan jika((v1522.Name=="MoveTo")dan v1522:IsA("RemoteEvent"))maka v514=v1522;
+    end
+  end
+  v515=v4:FindFirstChild("ByteNetReliable");
+  v905=1;
+end
+jika(v905==2)maka kembalikan v515 dan v516;
+end
+jika(v905==1)maka v906=v4:FindFirstChild("WorldRemotes");
+v516=v906 dan v906:FindFirstChild("SetTile");
+v905=2;
+end
+end
+end
+local v518;
+local function v519(v907)local v908=0;
+  local v909;
+  while true do
+    if(v908==0)then
+      if(type(v907)~="table")then
+        return false;
+      end
+      v909=rawget(v907, 2);
+      v908=1;
+    end
+    if(v908==1)then
+      return(type(v909)=="table")and(rawget(v909, "name")~=nil)and(rawget(v909, "solid")~=nil);
+    end
+  end
+end
+local function v520(v910)local v911=0;
+  local v912;
+  local v913;
+  local v914;
+  while true do
+    if(v911==1)then
+      if((type(v912)~="table")or(type(v913)~="table")))then
+        return false;
+      end
+      v914=rawget(v912, 1);
+      v911=2;
+    end
+    if(v911==2)then
+      return(type(v914)=="table")and(#v914>=50);
+      akhir jika(v911==0)maka jika(tipe(v910)~="table")maka kembalikan false;
+      akhir v912, v913=rawget(v910, "fg"), rawget(v910, "bg");
+      v911=1;
+      akhir akhir akhir fungsi lokal v521()jika(v518 dan v518.fg)maka kembalikan v518;
+      akhir lokal v915, v916;
+      fungsi lokal v917(v1226)lokal v1227=0;
+      lokal v1228;
+      lokal v1229;
+      selama benar lakukan jika(v1227==0)maka v1228, v1229=pcall(debug.getupvalues, v1226);
+      jika(bukan v1228 atau(tipe(v1229)~="table"))maka kembalikan;
+      akhir v1227=1;
+      akhir jika(v1227==1)kemudian untuk v1586, v1587 dalam pasangan(v1229)lakukan lokal v1588=0;
+      selama benar lakukan jika(v1588==0)maka jika(bukan v915 dan v520(v1587))maka v915=v1587;
+      akhir jika(bukan v916 dan v519(v1587))maka v916=v1587;
+      akhir break;
+      akhir akhir akhir break;
+      akhir akhir akhir untuk v1230, v1231 dalam ipairs(v4:GetDescendants())lakukan jika(v1231:IsA("RemoteEvent")dan((v1231.Name=="TileChanged")atau(v1231.Name=="LockChanged")atau(v1231.Name=="DoorChanged")))maka lokal v1418, v1419=pcall(getconnections, v1231.OnClientEvent);
+      if(v1418 dan(type(v1419)=="table"))then
+        for v1675, v1676 in ipairs(v1419)do
+          local v1677, v1678=pcall(function()return v1676.Function;
+          end
+          );
+          if(v1677 dan(type(v1678)=="function"))then
+            v917(v1678);
+          end
+        end
+      end
+    end
+  end
+  if not(v915 dan v916)then
+    local v1337=0;
+    local v1338;
+    local v1339;
+    while true do
+      if(0==v1337)then
+        v1338, v1339=pcall(getgc, true);
+        if v1338 then
+          for v1760, v1761 dalam ipairs(v1339)lakukan jika(tipe(v1761)=="table")maka jika(bukan v915 dan v520(v1761))maka v915=v1761;
+          akhir jika(bukan v916 dan v519(v1761))maka v916=v1761;
+          akhir jika(v915 dan v916)maka hentikan;
+          akhir akhir akhir akhir hentikan;
+          akhir akhir akhir jika bukan(v915 dan v916)maka kembalikan nil;
+          akhir v518={fg=v915.fg, bg=v915.bg, items=v916, w=v915.w atau 100, h=v915.h atau 60};
+          kembalikan v518;
+          akhir fungsi lokal v522(v918, v919, v920)local v921=0;
+          local v922;
+          local v923;
+          local v924;
+          local v925;
+          while true do
+            if(v921==0)then
+              v922=v521();
+              if not v922 then
+                return 0;
+              end
+              v921=1;
+            end
+            if(v921==3)then
+              return tonumber(v925)or 0;
+            end
+            if(v921==1)then
+              v923=v922[v918];
+              v924=v923 and v923[v920];
+              v921=2;
+            end
+            if(v921==2)then
+              v925=v924 and v924[v919];
+              if(type(v925)=="table")then
+                v925=v925[1]or v925.id;
+              end
+              v921=3;
+            end
+          end
+        end
+        local function v523(v926, v927, v928, v929)local v930=v521();
+          local v931=v930 and v930[v928];
+          local v932=v931 and v931[v927];
+          if v932 then
+            pcall(function()v932[v926]=v929 or 0;
+            end
+            );
+          end
+        end
+        local function v524(v933, v934)local v935=0;
+          local v936;
+          local v937;
+          local v938;
+          while true do
+            if(v935==1)then
+              v937=v522("fg", v933, v934);
+              if(v937==0)then
+                return false;
+              end
+              v935=2;
+            end
+            if(v935==2)then
+              v938=v936.items[v937];
+              return(v938 dan(v938.solid==true))atau false;
+            end
+            if(v935==0)then
+              v936=v521();
+              if(not v936 or(v933<0)or(v933>=v936.w)or(v934<0)or(v934>=v936.h))then
+                return false;
+              end
+              v935=1;
+            end
+          end
+        end
+        local function v525(v939, v940)local v941=0;
+          local v942;
+          local v943;
+          local v944;
+          while true do
+            if(0==v941)then
+              v942=v521();
+              if(not v942 or(v939<0)atau(v939>=v942.w)atau(v940<0)atau(v940>=v942.h))maka kembalikan true;
+              akhir v941=1;
+              akhir jika(v941==2)maka v944=v942.items[v943];
+              jika bukan v944 maka kembalikan true;
+              akhir v941=3;
+              akhir jika(v941==1)maka v943=v522("fg", v939, v940);
+              jika(v943==0)maka kembalikan false;
+              akhir v941=2;
+              akhir jika(v941==3)maka kembalikan(v944.solid==true)atau(v944.hurts==true);
+              akhir akhir akhir lokal v526, v527=Enum.KeyCode.A, Enum.KeyCode.D;
+              local v528;
+              local function v529(v945, v946)return math.floor(v945), math.floor(v946-0.001);
+              end
+              local function v530(v947, v948)return v947+0.5, v948+0.999;
+              end
+              local function v531(v949, v950)pcall(function()v7:SendKeyEvent(v950, v949, false, game);
+              end
+              );
+            end
+            local function v532()v528=nil;
+              v531(v526, false);
+              v531(v527, false);
+            end
+            local function v533(v951)jika(v528~=v951)maka lokal v1340=0;
+              selama benar lakukan jika(0==v1340)maka v532();
+              v531(v951, true);
+              v1340=1;
+              akhir jika(v1340==1)maka v528=v951;
+              break;
+              akhir akhir akhir akhir fungsi lokal v534()lokal v952=0;
+              selama benar lakukan jika(v952==1)maka v531(Enum.KeyCode.Space, false);
+              break;
+              akhir jika(0==v952)maka v531(Enum.KeyCode.Space, true);
+              task.wait(0.12);
+              v952=1;
+            end
+          end
+        end
+        local function v535(v953, v954)v532();
+          local v955, v956=v530(v953, v954);
+          if v514 then
+            pcall(firesignal, v514.OnClientEvent, v955, v956);
+          end
+          if v14 then
+            pcall(function()local v1424=buffer.create(9);
+              buffer.writeu8(v1424, 0, 2);
+              buffer.writef32(v1424, 1, v956);
+              buffer.writef32(v1424, 5, v955);
+              v14:FireServer(v1424);
+            end
+            );
+          end
+          v13.x, v13.y=v955, v956;
+        end
+        local function v536(v959, v960, v961)jika v510 maka lokal v1341=0;
+          selama benar lakukan jika(v1341==0)maka v532();
+          kembalikan false;
+          akhir akhir akhir lokal v962=v959+0.5;
+          jika(v961==1)maka v962=v959+0.35;
+          jika tidak(v961==-1)maka v962=v959+0.65;
+          akhir lokal v963=0;
+          lokal v964=v13.x atau 0;
+          lokal v965=os.clock();
+          selama bukan v510 dan((os.clock()-v965)<10)lakukan lokal v1232=0;
+          lokal v1233;
+          lokal v1234;
+          lokal v1235;
+          selama benar lakukan jika(3==v1232)maka v964=v13.x;
+          break;
+          akhiri jika(v1232==0)maka v1233, v1234=v529(v13.x, v13.y);
+          v1235=v962-v13.x;
+          v1232=1;
+        end
+        if(v1232==2)then
+          task.wait(0.03);
+          if(math.abs(v13.x-v964)<0.015)then
+            v963=v963+1;
+            if(v963>=10)then
+              local v1762=0;
+              while true do
+                if(v1762==0)then
+                  if((v1234>v960)or v525(v1233+(((v1235>0)and 1)or-1), v1234))then
+                    v534();
+                  end
+                  v963=0;
+                  break;
+                end
+              end
+            end
+          else
+            v963=0;
+          end
+          v1232=3;
+        end
+        if(1==v1232)then
+          if((v1233==v959)and(math.abs(v1235)<=0.28))then
+            local v1679=0;
+            local v1680;
+            while true do
+              if(v1679==0)then
+                v532();
+                task.wait(0.06);
+                v1679=1;
+              end
+              if(v1679==1)then
+                v1680=v529(v13.x, v13.y);
+                if(v1680==v959)then
+                  return true;
+                end
+                break;
+              end
+            end
+            Jika(math.abs(v1235)>0.08)maka v533(((v1235>0)dan v527)atau v526);
+          else
+            v532();
+          end
+          v1232=2;
+        end
+      end
+    end
+    v532();
+    task.wait(0.05);
+    local v966=v529(v13.x, v13.y);
+    return v966==v959;
+  end
+  local v537={[954]=2,[2]=3,[4]=3,[10]=8};
+  local v538={[14]=3};
+  local v539={cane=0, fg=0, bg=0, lava=0};
+  local function v540(v967, v968)local v969=0;
+    local v970;
+    while true do
+      if(v969==0)then
+        v970=v522("fg", v967, v968);
+        return v537[v970]~=nil, v970, v537[v970];
+      end
+    end
+  end
+  local function v541(v971, v972)local v973=0;
+    local v974;
+    while true do
+      if(v973==0)then
+        v974=v522("bg", v971, v972);
+        return v538[v974]~=nil, v974, v538[v974];
+      end
+    end
+  end
+  local function v542(v975, v976)local v977=0;
+    local v978;
+    local v979;
+    while true do
+      if(v977==1)then
+        return v978 or v979;
+      end
+      if(v977==0)then
+        v978=v540(v975, v976);
+        v979=v541(v975, v976);
+        v977=1;
+      end
+    end
+  end
+  local function v543(v980, v981, v982)local v983=0;
+    while true do
+      if(v983==0)then
+        for v1524=1, v982 do
+          if v510 then
+            return false;
+          end
+          v515:FireServer(v74(6, v980+0.5, v981+0.5));
+          task.wait(0.025);
+          v515:FireServer(v74(1, v980+0.69, v981+0.64));
+          task.wait(0.16);
+        end
+        return true;
+      end
+    end
+  end
+  local function v544(v984, v985, v986, v987, v988)local v989=0;
+    local v990=v986;
+    while not v510 and v542(v984, v985)do
+      v989=v989+1;
+      if((v989>=2)and(math.abs(v986-v984)>=2))then
+        local v1425=0;
+        local v1426;
+        while true do
+          if(0==v1425)then
+            v1426=v984+v988;
+            if v524(v1426, v987+1)then
+              v990=v1426;
+            end
+            break;
+          end
+        end
+      end
+      local v1236=v529(v13.x, v13.y);
+      if(v1236~=v990)then
+        v536(v990, v987, v988);
+      end
+      v532();
+      task.wait(0.04);
+      local v1237, v1238, v1239=v540(v984, v985);
+      if v1237 kemudian v511(string.format("Pukul FG (ID %d) di (%d,%d) [cek #%d]", v1238, v984, v985, v989));
+      jika bukan v543(v984, v985, v1239)maka kembalikan false;
+      akhir v516:FireServer("fg", v984, v985, 0);
+      lokal v1427=os.clock();
+      selama bukan v510 dan((os.clock()-v1427)<0.35)lakukan jika bukan v540(v984, v985)maka hentikan;
+      akhir task.wait(0.04);
+      akhir jika(v540(v984, v985)dan((v989>=2)atau(math.abs(v990-v984)<=1)))then
+        v523(v984, v985, "fg", 0);
+      end
+      if not v540(v984, v985)then
+        if(v1238==954)then
+          v539.cane=v539.cane+1;
+        else
+          v539.fg=v539.fg+1;
+        end
+      end
+      task.wait(0.08);
+    end
+    if v510 then
+      return false;
+    end
+    if(v522("fg", v984, v985)==0)then
+      local v1428, v1429, v1430=v541(v984, v985);
+      if v1428 then
+        local v1589=0;
+        local v1590;
+        while true do
+          if(v1589==1)then
+            v516:FireServer("bg", v984, v985, 0);
+            v1590=os.clock();
+            v1589=2;
+          end
+          if(v1589==0)then
+            v511(string.format("Pukul BG Cave (ID %d) di (%d,%d) [cek #%d]", v1429, v984, v985, v989));
+            if not v543(v984, v985, v1430)then
+              return false;
+            end
+            v1589=1;
+          end
+          if(v1589==2)then
+            while not v510 and((os.clock()-v1590)<0.35)lakukan jika bukan v541(v984, v985)maka hentikan;
+            akhiri tugas.tunggu(0.04);
+            akhiri jika(v541(v984, v985)dan((v989>=2)atau(math.abs(v990-v984)<=1)))maka v523(v984, v985, "bg", 0);
+            akhiri v1589=3;
+            akhiri jika(v1589==3)maka jika bukan v541(v984, v985)maka v539.bg=v539.bg+1;
+            akhiri tugas.tunggu(0.08);
+            hentikan;
+            akhiri akhiri akhiri jika(v989>=3)maka hentikan;
+            akhiri akhiri jika(bukan v510 dan(v990~=v986)dan v524(v986, v987+1))maka v536(v986, v987, v988);
+            akhir return bukan v542(v984, v985);
+            akhir fungsi lokal v545(v991, v992, v993, v994, v995)jika v510 maka kembalikan false;
+            akhir jika(v522("fg", v991, v992)~=4)maka kembalikan false;
+            akhir v532();
+            lokal v996=v992-1;
+            lokal v997=nil;
+            untuk v1240, v1241 dalam ipairs({v991-v993, v991+v993})lakukan jika((v1241>=v994)dan(v1241<=v995)dan(v522("fg", v1241, v992)~=4))maka v997=v1241;
+            break;
+          end
+        end
+        jika bukan v997 maka v997=math.clamp(v991-v993, v994, v995);
+      end
+      v511(string.format("[Lava] Ada lava di (%d,%d) -> TP ke (%d,%d)", v991, v992, v997, v996));
+      v535(v997, v996);
+      task.wait(0.25);
+      v535(v997, v996);
+      task.wait(0.35);
+      local v998=0;
+      while bukan v510 dan(v522("fg", v991, v992)==4)dan(v998<2)lakukan lokal v1242=0;
+      lokal v1243;
+      selama benar lakukan jika(v1242==1)maka jika bukan v543(v991, v992, v537[4]atau 3)maka kembalikan false;
+      akhir v516:FireServer("fg", v991, v992, 0);
+      v1242=2;
+      akhir jika(v1242==0)maka v998=v998+1;
+      v511(string.format("[Lava] Menghancurkan lava (%d,%d)...", v991, v992));
+      v1242=1;
+    end
+    if(2==v1242)then
+      v1243=os.clock();
+      while not v510 and((os.clock()-v1243)<0.3)do
+        if(v522("fg", v991, v992)==0)then
+          break;
+        end
+        task.wait(0.04);
+      end
+      break;
+    end
+  end
+end
+v523(v991, v992, "fg", 0);
+task.wait(0.15);
+if v510 then
+  return false;
+end
+v511(string.format("[Lava] Memasang Dirt di (%d,%d)...", v991, v992));
+for v1244=1, 3 lakukan jika v510 maka hentikan;
+akhir v516:FireServer("fg", v991, v992, 2);
+tugas.tunggu(0.2);
+akhir v523(v991, v992, "fg", 2);
+v539.lava=v539.lava+1;
+tugas.tunggu(0.15);
+return true;
+end
+local function v546(v1000, v1001, v1002, v1003, v1004, v1005)local v1006=math.clamp(v1000, v1004, v1005);
+  local v1007=math.clamp(v1001, v1004, v1005);
+  local v1008=((v1007>=v1006)and 1)or-1;
+  local v1009=(((v1003==1)or(v1003==-1))and v1003)or v1008;
+  for v1245=v1006, v1007, v1008 do
+    if v510 then
+      return;
+    end
+    if(v522("fg", v1245, v1002)==4)lalu v545(v1245, v1002, v1009, v1004, v1005);
+    fungsi lokal akhir akhir v547()jika v509 maka kembali;
+    akhir jika tidak(v13.x dan v13.y)maka v511("Posisi belum terbaca! Geser/gerakkan karakter sedikit.");
+    v56("Clear World: posisi belum terbaca", v16.RED);
+    return;
+  end
+  if not v517()then
+    v511("Remote tidak ditemukan!");
+    v56("Clear World: remote tidak ketemu", v16.RED);
+    return;
+  end
+  v518=nil;
+  if not v521()then
+    v511("Gagal membaca tabel peta dunia!");
+    v56("Clear World: peta tidak terbaca", v16.RED);
+    return;
+  end
+  local v1010=math.floor(tonumber(v493.Text)or 36);
+  local v1011=math.floor(tonumber(v494.Text)or 53);
+  local v1012=math.clamp(math.floor(tonumber(v495.Text)or 0), 0, 99);
+  local v1013=math.clamp(math.floor(tonumber(v496.Text)or 99), 0, 99);
+  if(v1012>v1013)then
+    v1012, v1013=v1013, v1012;
+  end
+  if(v1010>v1011)maka v1010, v1011=v1011, v1010;
+end
+local v1014=math.clamp(math.floor(tonumber(v497.Text)or 2), 1, 10);
+local v1015=math.clamp(math.floor(tonumber(v498.Text)or 3), 1, 10);
+local v1016=math.clamp(math.floor(tonumber(v499.Text)or 8), 1, 20);
+v537={[954]=v1014,[2]=v1015,[4]=v1015,[10]=v1016};
+v538={[14]=v1015};
+v509, v510=true, false;
+v539={cane=0, fg=0, bg=0, lava=0};
+v513(true);
+v512(0);
+v56("Clear World dimulai", v16.ON);
+local v1017=(v1011-v1010)+1;
+local v1018=(v1013-v1012)+1;
+local v1019=math.max(v1017*v1018, 1);
+local v1020=0;
+local v1021=((math.abs(v13.x-v1012)<=math.abs(v1013-v13.x))and 1)or-1;
+local function v1022(v1246, v1247)local v1248=0;
+  while true do
+    if(v1248==0)then
+      v511(string.format("Baris Y=%d | X=%d (%d%%)\nCane: %d | Blok: %d | Cave BG: %d | Lava->Dirt: %d", v1246, v1247, math.floor((v1020/v1019)*100), v539.cane, v539.fg, v539.bg, v539.lava));
+      v512(v1020/v1019);
+      break;
+    end
+  end
+end
+for v1249=v1010, v1011 do
+  if(v510 or not v31.Parent)then
+    break;
+  end
+  local v1250=((v1021==1)and v1012)or v1013;
+  local v1251=((v1021==1)and v1013)or v1012;
+  local v1252=false;
+  for v1342=v1250, v1251, v1021 do
+    if v542(v1342, v1249)then
+      v1252=true;
+      break;
+    end
+  end
+  if not v1252 then
+    local v1431=0;
+    while true do
+      if(v1431==0)then
+        v1020=v1020+v1018;
+        v1022(v1249, v1251);
+        break;
+      end
+    end
+  elseif(v1249==36)then
+    local v1591=0;
+    local v1592;
+    local v1593;
+    local v1594;
+    local v1595;
+    local v1596;
+    while true do
+      if(v1591==2)then
+        v511("Menuju titik awal baris Y=36 di X=" .. v1250 .. "...");
+        v546(v1594, v1250, v1593, v1595, v1012, v1013);
+        v1591=3;
+        akhir jika(v1591==1)maka v1594=v529(v13.x, v13.y);
+        v1595=((v1250>=v1594)dan 1)atau-1;
+        v1591=2;
+        akhir jika(v1591==0)maka v1592=36;
+        v1593=37;
+        v1591=1;
+        akhir jika(v1591==3)maka v536(v1250, v1592, v1021);
+        v1596=0;
+        v1591=4;
+      end
+      if(v1591==4)then
+        while(v1596<v1018)and not v510 and v31.Parent do
+          local v1801=0;
+          local v1802;
+          local v1803;
+          local v1804;
+          while true do
+            if(v1801==3)then
+              v1596=v1596+2;
+              task.wait(0.02);
+              break;
+            end
+            if(v1801==0)then
+              v1802=v1250+(v1596*v1021);
+              v1803=v1250+((v1596+1)*v1021);
+              v1801=1;
+            end
+            if(v1801==2)maka v1020=v1020+((v1804 dan 2)atau 1);
+            v1022(36, v1802);
+            v1801=3;
+            akhir jika(v1801==1)maka v1804=(v1596+1)<v1018;
+            jika(v542(v1802, 36)atau(v1804 dan v542(v1803, 36)))maka lokal v1879=0;
+            lokal v1880;
+            selama benar lakukan jika(1==v1879)maka v546(v1802, v1880, v1593, v1021, v1012, v1013);
+            jika v524(v1802, 36)maka lokal v1905=0;
+            lokal v1906;
+            selama benar lakukan jika(v1905==1)maka v544(v1802, 36, v1906, v1592, v1021);
+            break;
+            akhir jika(v1905==0)maka v1906=math.clamp(v1802-v1021, v1012, v1013);
+            v536(v1906, v1592, 0);
+            v1905=1;
+            akhir akhir akhir v1879=2;
+            akhir jika(v1879==0)maka v1880=v1802+(2*v1021);
+            jika(((v1021==1)dan(v1880>v1013))atau((v1021==-1)dan(v1880<v1012)))maka v1880=v1251;
+            akhir v1879=1;
+            akhir jika(v1879==2)maka jika(v1804 dan v524(v1803, 36))maka v536(v1802, v1592, 0);
+            v544(v1803, 36, v1802, v1592, v1021);
+            akhir v536(v1880, v1592, v1021);
+            v1879=3;
+          end
+          if(v1879==3)then
+            if v542(v1802, 36)then
+              v544(v1802, 36, v1880, v1592, v1021);
+            end
+            if(v1804 and v542(v1803, 36))then
+              v544(v1803, 36, v1880, v1592, v1021);
+            end
+            break;
+          end
+        end
+      end
+      v1801=2;
+    end
+  end
+end
+v1021=-v1021;
+break;
+end
+end
+else
+  local v1597=v1249-1;
+  local v1598=v1249;
+  local v1599=0;
+  while(v1599<(v1018-2))and not v510 and v31.Parent do
+    local v1681=v1250+(v1599*v1021);
+    local v1682=v1250+((v1599+1)*v1021);
+    local v1683=v1250+((v1599+2)*v1021);
+    v546(v1681, v1683+v1021, v1598, v1021, v1012, v1013);
+    if(v542(v1681, v1249)atau v542(v1682, v1249))maka lokal v1763=0;
+    selama benar lakukan jika(0==v1763)maka v536(v1683, v1597, v1021);
+    jika v542(v1681, v1249)maka v544(v1681, v1249, v1683, v1597, v1021);
+    akhir v1763=1;
+    akhir jika(v1763==1)maka jika v542(v1682, v1249)maka v544(v1682, v1249, v1683, v1597, v1021);
+    akhir break;
+  end
+end
+end
+v1020=v1020+2;
+v1022(v1249, v1681);
+v1599=v1599+2;
+task.wait(0.02);
+end
+if(not v510 and v31.Parent)then
+  local v1705=0;
+  local v1706;
+  while true do
+    if(v1705==0)then
+      v1706=v1251-v1021;
+      v546(v1706, v1251, v1598, v1021, v1012, v1013);
+      v1705=1;
+    end
+    if(v1705==1)then
+      if(v1249<v1011)then
+        v546(v1251, v1251-(2*v1021), v1249+1,-v1021, v1012, v1013);
+        akhir jika v524(v1251, v1249)maka v536(v1251, v1597, v1021);
+        jika v542(v1706, v1249)maka v544(v1706, v1249, v1251, v1597, v1021);
+        akhir v1020=v1020+1;
+        v1022(v1249, v1706);
+        jika(bukan v510 dan v542(v1251, v1249))maka v544(v1251, v1249, v1251, v1597, 0);
+        tugas.tunggu(0.25);
+        akhir v1020=v1020+1;
+        v1022(v1249, v1251);
+      else
+        local v1858=0;
+        while true do
+          if(v1858==1)then
+            v1020=v1020+1;
+            v1022(v1249, v1251);
+            v1858=2;
+          end
+          if(v1858==3)then
+            v1022(v1249, v1706);
+            break;
+          end
+          if(v1858==2)then
+            if(not v510 and v542(v1706, v1249))then
+              local v1901=0;
+              while true do
+                if(v1901==0)kemudian v544(v1706, v1249, v1706, v1597, 0);
+                task.wait(0.25);
+                break;
+              end
+            end
+          end
+          v1020=v1020+1;
+          v1858=3;
+        end
+        jika(v1858==0)maka v536(v1706, v1597, 1170-(943 ​​+227));
+        jika v542(v1251, v1249)maka v544(v1251, v1249, v1706, v1597,-v1021);
+      end
+      v1858=1;
+    end
+  end
+end
+break;
+end
+end
+end
+v1021=-v1021;
+end
+end
+v532();
+v512((v510 dan(v1020/v1019))atau 1);
+v509=false;
+v511(string.format("%s\nCane: %d | Blok: %d | Cave BG: %d | Lava->Dirt: %d",(v510 dan "Dihentikan.")atau "SELESAI CLEAR WORLD!", v539.cane, v539.fg, v539.bg, v539.lava));
+v56((v510 dan "Clear World" ditandai") atau "Clear World selesai!" ,(v510 dan v16.YEL) atau v16.ON );v513(false);end getgenv().CWStop=function() v510=true;v532();end;v491.Activated:Connect(function() if v509 kemudian lokal v1343=1631 -(1539 + 92) ;selama benar lakukan jika (v1343==0) maka v510=true;v532();v1343=1947 -(706 + 1240) ;akhir jika (v1343==1) maka v511("Menghentikan...");break;akhir akhir jika tidak task.spawn(v547);akhir akhir);v28[ #v28 + 1 ]=fungsi() lokal v1023=258 -(81 + 177) ;selama benar lakukan jika (v1023==(5 -3)) maka v532();break;akhir jika (v1023==(257 -(212 + 45))) maka v510=true;v506=false;v1023=3 -2 ;akhir jika (v1023==(1947 -(708 + 1238))) then v507=v507 + 1 + 0 ;pcall(function() v508.set(false,true);end);v1023=2;end end end;end)();(function() local v550=v63("Items","📦","Drop item dari inventory(Fix Visual Backpack)");v64(v550,"Drop Item");local v551,v552=v67(v550,"ID item",2,"Jumlah",1 + 0 );local v553,v554=v67(v550,"Posisi X(manual)",1717 -(586 + 1081) ,"Posisi Y(manual)",547 -(348 + 163) );local v555=v67(v550,"Tunda penurunan otomatis(detik)",1 + 0 );local v556=v65(v550,"Pakai Posisi Karakter Saat Ini(Px, Py)",true);local function v557() local v1024=280 -(215 + 65) ;local v1025;local v1026;local v1027;local v1028;local v1029;local v1030;local v1031;local v1032;local v1033;while true do if (v1024==1) then v1028=math.max(math.floor(tonumber(v552.Text) or (2 -1) ),1);v1029=v78(v1027,true);if ((v1029~=nil) and (v1029<=(1859 -(1541 + 318)))) maka lokal v1600=0 + 0 ;selama benar lakukan jika (v1600==1) maka kembalikan salah;akhir jika (v1600==(0 + 0)) maka v53(string.format("ID Barang%d habis di ransel 0!",v1027),v16.RED);v56(string.format("ID Item%d habis di ransel!",v1027),v16.YEL);v1600=1 + 0 ;end end end v1024=2;end if ((1753 -(1036 + 714))==v1024) then v1026:FireServer(v1027,v1030,v1031,v1032);v79(v1027,v1030);v1033=v78(v1027,false);v1024=4;end if (v1024==(3 + 1)) then v53(string.format("ID Drop%dx%d di(%.1f,%.1f)| Sisa:%s",v1027,v1030,v1031,v1032,tostring(v1033 or "?" )),v16.ON);return true;end if ((0 + 0)==v1024) then v1025,v1025,v1025,v1026=v73();if not v1026 then local v1601=1280 -(883 + 397) ;while true do if (v1601==(590 -(563 + 27))) then v53("DropItem tidak ditemukan",v16.RED);v56("Item: Remote DropItem tidak ditemukan",v16.RED);v1601=3 -2 ;end if (v1601==(1987 -(1369 + 617))) then return false;end end end v1027=tonumber(v551.Text) or 2 ;v1024=1488 -(85 + 1402) ;end if (v1024==(1 + 1)) then v1030=(v1029 and math.min(v1028,v1029)) or v1028 ;v1031,v1032=nil;if v556.get() then local v1602=0 -0 ;while true do if (v1602==(403 -(274 + 129))) then if not (v13.x and v13.y) then v53("Gerakkan karakter sedikit agar Px & Py terbaca!",v16.RED);v56("Items: Gerakkan karakter sedikit dulu!",v16.RED);return false;end v1031,v1032=v13.x,v13.y;break;end end else local v1603=217 -(12 + 205) ;while true do if ((0 + 0)==v1603) then v1031=tonumber(v553.Text) or (193 -143) ;v1032=tonumber(v554.Text) or (35 + 1) ;break;end end end v1024=387 -(27 + 357) ;end end end v68(v550,"Drop Sekali(Fix Visual Backpack)",function() if v557() then v56("Drop terkirim & backpack diperbarui",v16.ON);end end);local v558,v559=false,480 -(91 + 389) ;local v560;v560=v65(v550,"Auto Drop",false,function(v1034) local v1035=0;local v1036;while true do if (v1035==(297 -(90 + 207))) maka v558=v1034;v559=v559 + 1 ;v1035=1 + 0 ;akhir jika (v1035==(862 -(706 + 155))) maka v1036=v559;jika bukan v1034 maka v53("Auto Drop berhenti",v16.YEL);kembali;akhir v1035=1797 -(730 + 1065) ;akhir jika (v1035==(1565 -(1339 + 224))) maka selama v558 dan (v1036==v559) dan v31.Parent lakukan jika bukan v557() maka v558=false;v560.set(false,true);break;akhir task.wait(math.max(tonumber(v555.Text) or (1 + 0) ,0.5));end break;end end end);v69(v550,"Hanya item milikmu sendiri. Secara otomatis memperbarui jumlah item di UI Backpack saat di-drop.");v28[ #v28 + 1 ]=function() local v1037=0 + 0 ;while true do if (v1037==(0 -0)) then v558=false;v559=v559 + 1 ;v1037=1;end if (1==v1037) then v560.set(false,true);break;end end end;end)();(function() local v562=v63("Collect","🧲","Kejar item drop terdekat • v2");v64(v562,"Auto Collect");local v563=v20("TextLabel",{Size=UDim2.new(1,843 -(268 + 575) ,1294 -(919 + 375) ,153 -97 ),BackgroundColor3=v16.card,LayoutOrder=v61(),Text="Belum berjalan.",TextColor3=v16.dm,TextSize=982 -(180 + 791) ,Font=v17.r,TextWrapped=true,TextXAlignment=v18,TextYAlignment=Enum.TextYAlignment.Top},v562);v21(v563,1813 -(323 + 1482) );v24(v563,6,1926 -(1177 + 741) ,8,1 + 5 );local v564;local function v565(v1038) local v1039=0;local v1040;while true do if (v1039==(3 -2)) then return (type(v1040)=="table") and (rawget(v1040,"name")~=nil) and (rawget(v1040,"solid")~=nil) ;end if (v1039==0) then if (type(v1038)~="table") then return false;end v1040=rawget(v1038,1 + 1 );v1039=1 -0 ;end end end local function v566(v1041) local v1042=0 + 0 ;local v1043;local v1044;local v1045;while Jika (v1042==(109 -(96 + 13))) maka jika (tipe(v1041)~="table") maka kembalikan false;end v1043,v1044=rawget(v1041,"fg"),rawget(v1041,"bg");v1042=1922 -(962 + 959) ;end jika (v1042==(2 -1)) maka jika ((tipe(v1043)~="table") atau (tipe(v1044)~="table")) maka kembalikan false;end v1045=rawget(v1043,1);v1042=2;end jika (v1042==(1 + 1)) maka kembalikan (tipe(v1045)=="table") dan ( #v1045>=(1401 -(461 + 890))) ;end end end local function v567() lokal v1046=0;lokal v1047;lokal v1048;lokal v1049;selama benar lakukan jika ((2 + 0)==v1046) maka untuk v1525,v1526 dalam ipairs(v4:GetDescendants()) lakukan jika (v1526:IsA("RemoteEvent") dan (v1526.Name=="TileChanged")) maka lokal v1684=0;lokal v1685;lokal v1686;selama benar lakukan jika (v1684==(0 -0)) maka v1685,v1686=pcall(getconnections,v1526.OnClientEvent);jika (v1685 dan (type(v1686)=="table")) maka untuk v1859,v1860 dalam ipairs(v1686) lakukan lokal v1861,v1862=pcall(function() return v1860.Function;end);if (v1861 and (type(v1862)=="function")) then v1049(v1862);end end end break;end end end end if not (v1047 and v1048) then return nil;end v1046=246 -(19 + 224) ;end if (v1046==(1 + 0)) then v1049=nil;function v1049(v1527) local v1528,v1529=pcall(debug.getupvalues,v1527);if ( not v1528 or (type(v1529)~="table")) then return;end for v1604,v1605 in pairs(v1529) do if ( not v1047 and v566(v1605)) maka v1047=v1605;akhir jika ( bukan v1048 dan v565(v1605)) maka v1048=v1605;akhir akhir akhir v1046=200 -(37 + 161);akhir jika ((0 + 0)==v1046) maka jika (v564 dan v564.fg) maka kembalikan v564;akhir v1047,v1048=nil;v1046=1 + 0;akhir jika (v1046==(3 + 0)) maka v564={fg=v1047.fg,items=v1048,w=v1047.w atau (161 -(60 + 1)) ,h=v1047.h atau (983 -(826 + 97)) ,state=v1047};return v564;end end end local function v568(v1050,v1051) local v1052=0 + 0 ;local v1053;local v1054;local v1055;while true do if (v1052==(3 -2)) then v1054=v1053.fg[v1051];v1055=v1054 and v1054[v1050] ;v1052=2;end if (v1052==2) then if (type(v1055)=="table") then v1055=v1055[1] or v1055.id ;end return tonumber(v1055) or (0 -0) ;end if (v1052==(685 -(375 + 310))) then v1053=v567();jika bukan v1053 maka kembalikan 1999 -(1864 + 135) ;akhir v1052=2 -1 ;akhir akhir akhir fungsi lokal v569(v1056,v1057) lokal v1058=0 + 0 ;lokal v1059;lokal v1060;lokal v1061;selama benar lakukan jika (v1058==(0 + 0)) maka v1059=v567();jika ( bukan v1059 atau (v1056<(0 -0)) atau (v1056>=v1059.w) atau (v1057<(1131 -(314 + 817))) atau (v1057>=v1059.h)) maka kembalikan true;akhir v1058=1 + 0 ;akhir jika (v1058==(216 -(32 + 182))) maka v1061=v1059.items[v1060];jika bukan v1061 maka kembalikan true;akhir v1058=3 + 0 ;akhir jika ((3 -2)==v1058) maka v1060=v568(v1056,v1057);jika (v1060==0) maka kembalikan false;akhir v1058=2;akhir jika (v1058==(68 -(39 + 26))) maka kembalikan (v1061.solid==true) atau (v1061.hurts==true) ;akhir akhir akhir fungsi lokal v570(v1062,v1063,v1064,v1065) lokal v1066=144 -(54 + 90) ;local v1067;local v1068;local v1069;local v1070;local v1071;while true do if (v1066==(199 -(45 + 153))) then v1068={[v1067(v1062,v1063)]=false};v1069,v1070={{v1062,v1063}},1 + 0 ;v1066=2;end if (v1066==2) then v1071={{1 -0 ,0},{ -1,0 + 0 },{0 -0 ,749 -(485 + 263) },{0, -(862 -(750 + 111))}};while (v1070<= #v1069) dan (v1070<6000) lakukan lokal v1530=0;lokal v1531;selama benar lakukan jika (v1530==1) maka jika ((v1531[1011 -(445 + 565) ]==v1064) dan (v1531[2 + 0 ]==v1065)) maka lokal v1805,v1806={},v1531;selama v1806 lakukan lokal v1825=0;selama benar lakukan jika (v1825==(0 + 0)) maka table.insert(v1805,1,v1806);v1806=v1068[v1067(v1806[1 -0 ],v1806[1 + 1 ])];break;end end end return v1805;end untuk v1766,v1767 dalam ipairs(v1071) lakukan lokal v1768=310 -(189 + 121) ;lokal v1769;lokal v1770;lokal v1771;selama benar lakukan jika (v1768==1) maka jika ((v1068[v1771]==nil) dan bukan v569(v1769,v1770)) maka v1068[v1771]=v1531;v1069[ #v1069 + 1 ]={v1769,v1770};akhiri break;akhiri jika (v1768==(1347 -(634 + 713))) maka v1769,v1770=v1531[539 -(493 + 45) ] + v1767[1] ,v1531[2] + v1767[970 -(493 + 475) ] ;v1771=v1067(v1769,v1770);v1768=1 + 0 ;end end end break;end if (v1530==0) then v1531=v1069[v1070];v1070=v1070 + 1 ;v1530=785 -(158 + 626) ;end end end break;end if (v1066==(0 + 0)) then v1067=nil;function v1067(v1532,v1533) return (v1533 * (423 -167)) + v1532 ;end v1066=1 + 0 ;end end end local function v571() local v1072=v567();local v1073=v1072 and rawget(v1072.state,"dropList") ;if (type(v1073)~="table") then return nil;end local v1074={};for v1253,v1254 in pairs(v1073) do if (type(v1254)=="table") then local v1434=rawget(v1254,"x") or rawget(v1254,"X") or rawget(v1254,"px") ;local v1435=rawget(v1254,"y") or rawget(v1254,"Y") or rawget(v1254,"py") ;if not ((type(v1434)=="number") and (type(v1435)=="number")) then local v1606=0 + 0 ;local v1607;local v1608;while true do if (v1606==(1091 -(1035 + 56))) then v1434,v1435=nil,nil;v1607=rawget(v1254,"pos") or rawget(v1254,"position") or rawget(v1254,"p") ;v1606=960 -(114 + 845) ;end if ((1 + 0)==v1606) then v1608=typeof(v1607);if ((v1608=="Vector2") or (v1608=="Vector3")) then v1434,v1435=v1607.X,v1607.Y;end break;end end end if ((type(v1434)=="number") and (type(v1435)=="number") and (v1434>=(0 -0)) and (v1434<=(85 + 15)) and (v1435>=0) and (v1435<=(1109 -(179 + 870)))) then v1074[ #v1074 + 1 ]={x=v1434,y=v1435};end end end return v1074;end local v572,v573=nil,0 -0 ;local function v574() local v1075=878 -(827 + 51) ;local v1076;while true do if (v1075==(0 -0)) then if not (v572 and v572.Parent) then v572=nil;local v1610,v1611=pcall(function() return v8.PlayerGui.GameGui.World.Camera;end);if (v1610 and v1611) then for v1772,v1773 in ipairs(v1611:GetChildren()) do if (v1773.Name=="Drop") then v572=v1611;break;end end end if ( not v572 and ((os.clock() -v573)>(1 + 0))) then local v1708=473 -(95 + 378) ;selama benar lakukan jika ((0 + 0)==v1708) maka v573=os.clock();untuk v1848,v1849 dalam ipairs(v8.PlayerGui:GetDescendants()) lakukan jika ((v1849.Name=="Drop") dan v1849:IsA("GuiObject")) maka v572=v1849.Parent;break;end end break;end end end end v1076={};v1075=1 -0 ;end jika ((1 + 0)==v1075) maka jika v572 maka untuk v1687,v1688 dalam ipairs(v572:GetChildren()) lakukan jika ((v1688.Name=="Drop") dan v1688:IsA("GuiObject")) maka v1076[ #v1076 + (1012 -(334 + 677)) ]=v1688;end end end return v1076;end end end local v575,v576=Enum.KeyCode.A,Enum.KeyCode.D;local v577;local function v578(v1077,v1078) pcall(function() v7:SendKeyEvent(v1078,v1077,false,game);end);end local function v579() v577=nil;v578(v575,false);v578(v576,false);end local function v580(v1079) if (v577~=v1079) then v579();v578(v1079,true);v577=v1079;end end local function v581() local v1080=0 -0 ;while true do if (v1080==(1056 -(1049 + 7))) then v578(Enum.KeyCode.Space,true);task.wait(0.12 -0 );v1080=1 -0 ;end if (v1080==(1 + 0)) then v578(Enum.KeyCode.Space,false);break;end end end local function v582(v1081,v1082) return math.floor(v1081),math.floor(v1082-(0.001 -0) );end local v583,v584=false,0 -0 ;local v585,v586,v587,v588,v589={},0,0 + 0 ,1420 -(1004 + 416) ,1957 -(1621 + 336) ;fungsi lokal v590(v1083) jika tidak (v13.x dan v13.y) maka kembalikan;akhir jika ((math.abs(v13.x-v586 ) + math.abs(v13.y-v587 ))<(1939.03 -(337 + 1602))) maka jika ((os.clock() -v588)>0.8) maka lokal v1534=1517 -(1014 + 503) ;selama benar lakukan jika (v1534==1) maka v588=os.clock();jika (v589>=(1019 -(446 + 569))) maka lokal v1807=0 + 0 ;selama benar lakukan jika (v1807==(2 -1)) maka v589=0;break;end if (0==v1807) then v579();if v1083 then v585[v1083]=os.clock() + 4 + 6 ;end v1807=1 -0 ;end end end break;end if (v1534==(0 + 0)) then v581();v589=v589 + 1 ;v1534=506 -(223 + 282) ;end end end else v586,v587,v588,v589=v13.x,v13.y,os.clock(),0;end end local v591;v591=v65(v562,"Auto Collect",false,function(v1084) v583=v1084;v584=v584 + 1 ;local v1085=v584;jika bukan v1084 maka lokal v1346=0;selama benar lakukan jika (v1346==(0 + 0)) maka v579();v563.Text="Berhenti.";v1346=1 -0 ;akhir jika (v1346==(1 -0)) maka v53("Kumpulkan berhenti",v16.YEL);kembali;akhir akhir akhir v585,v589={},670 -(623 + 47) ;selama v583 dan (v1085==v584) dan v31.Parent lakukan lokal v1255=v571();lokal v1256,v1257=nil,0;jika v1255 maka v1257= #v1255;jika (v13.x dan v13.y) maka lokal v1613=0;lokal v1614;selama benar lakukan jika (v1613==(45 -(32 + 13))) maka v1614=nil;untuk v1808,v1809 in ipairs(v1255) do local v1810=math.floor(v1809.x) .. ", " .. math.floor(v1809.y) ;if not (v585[v1810] and (v585[v1810]>os.clock())) then local v1850=0;local v1851;while true do if (v1850==(0 + 0)) then v1851=math.abs(v1809.x-v13.x ) + math.abs(v1809.y-v13.y ) ;if ( not v1614 or (v1851<v1614)) then v1256,v1614=v1809,v1851;end break;end end end end break;end end end end if v1256 then local v1436=math.floor(v1256.x) .. ", " .. math.floor(v1256.y) ;local v1437,v1438=v1256.x-v13.x ,v1256.y-v13.y ;if ((math.abs(v1437)<(0.45 + 0)) and (math.abs(v1438)<(1802.3 -(1070 + 731)))) then v579();v585[v1436]=os.clock() + 2 ;v563.Text=string.format("Mode dunia | drop%d\nsampai di(%.1f,%.1f)",v1257,v1256.x,v1256.y);task.wait(0.25);else lokal v1617,v1618=v582(v13.x,v13.y);lokal v1619,v1620=math.floor(v1256.x),math.floor(v1256.y);jika v569(v1619,v1620) maka v1620=v1620-(1 + 0);akhir lokal v1621=v570(v1617,v1618,v1619,v1620);jika (v1621 dan ( #v1621>=(1406 -(1257 + 147)))) maka lokal v1709,v1710=v1621[1 + 1 ][1 -0 ],v1621[2][2];jika (v1710==v1618) maka v580(((v1709>v1617) dan v576) atau v575 );elseif (v1710<v1618) then v579();v581();task.wait(133.3 -(98 + 35) );else v579();end v590(v1436);else v579();v585[v1436]=os.clock() + 10 ;end v563.Text=string.format("Mode dunia | drop%d\ntarget(%.1f,%.1f)| bot(%.1f,%.1f)",v1257,v1256.x,v1256.y,v13.x,v13.y);v53("Collect: kejar item",v16.ON);end elseif (v1257>0) then v579();v563.Text=string.format("Mode dunia | drop%d tapi semua dilewati sementara\n(tidak ada jalan atau macet)",v1257);v53("Kumpulkan: menunggu",v16.dm);else local v1624=0 + 0 ;local v1625;sementara true do if (v1624==0)then v1625=v574();if ( #v1625==(0 -0)) lalu local v1828=0 -0 ;sementara true lakukan if (v1828==(0 + 0)) maka v579();v563.Text="Tidak ada drop terdeteksi.\ndaftar game: " .. ((v1255 dan "kosong") atau "tidak terbaca") .. " | frame Drop: 0" ;v1828=1 + 0 ;akhiri jika (v1828==(1 + 0)) lalu v53("Kumpulkan: tidak ada item",v16.dm);break;end end else local v1829=557 -(395 + 162) ;local v1830;local v1831;local v1832;local v1833;local v1834;while true do if (v1829==(3 + 0)) then v563.Text=string.format("Mode layar(cadangan)| frame Drop:%d\njarak X ke item:%.0f px", #v1625,v1833);v53("Kumpulkan: kejar item(layar)",v16.ON);break;end if (v1829==(1943 -(816 + 1125))) then v1834=((v1833>12) and v576) or ((v1833< -12) and v575) atau nil ;jika v1834 maka lokal v1894=0;selama benar lakukan jika (v1894==(0 -0)) maka v580(v1834);v590(nil);break;akhir akhir jika tidak v579();akhir v1829=3;akhir jika (v1829==(1148 -(701 + 447))) maka v1830=workspace.CurrentCamera.ViewportSize;v1831,v1832=nil;v1829=1;akhir jika (v1829==1) maka untuk v1882,v1883 dalam ipairs(v1625) lakukan lokal v1884=v1883.AbsolutePosition + (v1883.AbsoluteSize/(2 -0)) ;lokal v1885=(v1884-(v1830/(2 -0))).Magnitude;if ( not v1832 or (v1885<v1832)) then v1831,v1832=v1884,v1885;end end v1833=v1831.X-(v1830.X/(1343 -(391 + 950))) ;v1829=2;end end end break;end end end task.wait(0.05);end v579();end);v69(v562,"Prioritas: koordinat dunia dari state game. Kalau tidak terbaca, pakai frame Drop di layar(cadangan).");v28[ #v28 + (2 -1) ]=function() local v1086=0 -0 ;while true do if (v1086==(0 -0)) then v583=false;v584=v584 + 1 + 0 ;v1086=1;end if (v1086==(1 + 0)) then v579();v591.set(false,true);break;end end end;end)();do local v593=0 -0 ;local v594;local v595;local v596;local v597;local v598;while true do if (v593==(1525 -(251 + 1271))) then v68(v594,"Set Public",function() local v1439=0 + 0 ;local v1440;while true do if (v1439==2) then v56("Lock diset public",v16.ON);break;end if (v1439==(2 -1)) then v1440:FireServer(tonumber(v595.Text) or 21 ,tonumber(v596.Text) or (87 -52) ,{public=true});v53("Lock diset public");v1439=2 -0 ;end if ((1259 -(1147 + 112))==v1439) then v1440=v598();if not v1440 then local v1775=0 + 0 ;while true do if (v1775==(1 -0)) then return;end if (v1775==0) then v53("EditLock tidak ditemukan",v16.RED);v56("EditLock tidak ditemukan",v16.RED);v1775=1 + 0 ;end end end v1439=698 -(335 + 362) ;end end end);v68(v594,"Tambah Pemain",function() local v1441=v598();if not v1441 then v53("EditLock tidak ditemukan",v16.RED);v56("EditLock tidak ditemukan",v16.RED);return;end local v1442=tonumber(v597.Text);if not v1442 then local v1626=0;local v1627;local v1628;while true do if ((0 + 0)==v1626) then v1627,v1628=pcall(function() return v3:GetUserIdFromNameAsync(v597.Text);end);if v1627 then v1442=v1628;end break;end end end if not v1442 then v53("Username tidak ditemukan",v16.RED);v56("Username tidak ditemukan",v16.RED);return;end v1441:FireServer(tonumber(v595.Text) or (31 -10) ,tonumber(v596.Text) or (95 -60) ,{add=v1442});v53("Pemain ditambahkan: " .. v1442 );v56("Pemain ditambahkan: " .. v1442 ,v16.ON);end);v593=14 -10 ;end if (v593==(4 -3)) then v595,v596=v67(v594,"Lock X",21,"Lock Y",99 -64 );v597=v67(v594,"Username/UserId","");v593=568 -(237 + 329) ;end if (v593==(0 -0)) then v594=v63("Lock","🔒","Atur lock milikmu");v64(v594,"Lock milikmu");v593=1 + 0 ;end if (v593==2) then v598=nil;function v598() local v1443=0;local v1444;local v1445;while true do if (v1443==(0 + 0)) then v1444,v1445=v72();return v1445 and v1445:FindFirstChild("EditLock") ;end end end v593=1127 -(408 + 716) ;end if (v593==(15 -11)) then v69(v594,"Hanya berlaku untuk lock milikmu. Server menolak lock orang lain.");break;end end end do local v599=v63("Info","ℹ️","Tentang hub & kontrol");v64(v599,"Tentang");v69(v599,"Fian792 Hub v" .. v0 .. "(Auto DF v" .. v1 .. "+Clear World v" .. v2 .. ").\n" .."• Geser jendela lewat bar atas\n" .. "• Tombol – untuk meminimalkan(tombol bulat bisa digeser)\n" .. "• RightShift untuk sembunyikan/tampilkan\n" .. "• X untuk menutup hub dan menghentikan semua fitur" );v64(v599,"Kontrol");v68(v599,"Hentikan Semua",function() v29(false);v53("Semua dihentikan",v16.YEL);v56("Semua fitur dihentikan",v16.YEL);end,v16.card2);v68(v599,"Tutup Hub",function() v30();end,v16.RED);end v62("Farm");local v121=v20("TextButton",{Size=UDim2.new(821 -(344 + 477) ,8 + 38 ,1761 -(1188 + 573), 120 - 74), Position=UDim2.new(0, 14 + 0, 0.5, -(74 - 51)), AutoButtonColor=false, BackgroundColor3=v16.wh, Text="J", TextColor3=v16.wh, TextSize=28 - 9, Font=v17.b, Visible=false}, v31); v21(v121, 56 - 33); v23(v121, v16.acc, v16.acc2, 45); v22(v121, v16.wh, 1.5, 0.3); do local v600=1529 - (508 + 1021); local v601; local v602; while true do if (v600 == (0 + 0)) then v601=nil; function v601(v1446) local v1447=1166 -(228 + 938) ;while true do if (v1447==(685 -(332 + 353))) then if (v1446==v16.bg) then return 0.25;end if (v1446==v16.panel) then return 0.38 -0 ;end v1447=2 -1 ;end if (v1447==(1 + 0)) then if (v1446==v16.card) then return 0.52 + 0 ;end if (v1446==v16.card2) then return 0.45;end break;end end end v600=3 -2 ;end if (v600==(424 -(18 + 405))) then for v1448,v1449 in ipairs(v31:GetDescendants()) do if (v1449:IsA("GuiObject") and (v1449~=v34) and (v1449.BackgroundTransparency<(1 + 0))) then if ((v1449.Parent==v36) and (v1449.ClassName=="Frame")) then v1449.BackgroundTransparency=1;else local v1713=v601(v1449.BackgroundColor3);if v1713 then v1449.BackgroundTransparency=v1713;end end end end v34.BackgroundColor3=v15(129 + 126 ,388 -133 ,255);v600=980 -(194 + 784) ;end if (v600==4) then task.spawn(function() local v1450=1770 -(694 + 1076) ;local v1451;local v1452;local v1453;while true do if (3==v1450) then v121.Text="";v1453(v121,1927 -(122 + 1782) );break;end if (v1450==(1 + 0)) then v1453=nil;function v1453(v1714,v1715) local v1716=Instance.new("ImageLabel");v1716.Size=UDim2.new(1,0 + 0 ,1,0 + 0 );v1716.BackgroundTransparency=1 + 0 ;v1716.Image=v1451;v1716.ScaleType=Enum.ScaleType.Crop;v1716.ZIndex=14 -9 ;v1716.Parent=v1714;v21(v1716,v1715);end v1450=2 + 0 ;end if (v1450==(1970 -(214 + 1756))) then v1451,v1452=v11();if not v1451 then if v1452 then v56("Logo: " .. v1452 ,v16.YEL);end return;end v1450=4 -3 ;end if (v1450==(1 + 1)) then v38.Text="";v1453(v38,9);v1450=1 + 2 ;end akhir akhir);break;akhir jika (v600==(588 -(217 + 368))) maka v602=v34:FindFirstChildOfClass("UIStroke");jika v602 maka lokal v1535=0 -0 ;selama benar lakukan jika (v1535==(1 + 0)) maka v602.Ketebalan=1.2 + 0 ;break;akhir jika (v1535==0) maka v602.Warna=v16.wh;v602.Transparansi=0.72 + 0 ;v1535=890 -(844 + 45) ;akhir akhir akhir v600=288 -(242 + 42) ;akhir jika (v600==2) maka v34.BackgroundTransparency=0.2 -0 ;pcall(function() local v1454=Instance.new("UIGradient");v1454.Color=ColorSequence.new(v15(106 -60 ,40,1296 -(132 + 1068) ),v15(18 -6 ,1635 -(214 + 1409) ,24));v1454.Rotation=55;v1454.Parent=v34;end);v600=3 + 0 ;end end end local v122=false;local function v123() if v122 then return;end v34.Visible=true;v121.Visible=false;v35.Scale=v33 * (1634.85 -(497 + 1137)) ;v25(v35,0.28,{Scale=v33},Enum.EasingStyle.Back);end local function v124() local v606=940 -(9 + 931) ;while true do if (v606==(290 -(181 + 108))) then v25(v35,0.16,{Scale=v33 * 0.85 });task.delay(0.16 + 0 ,function() local v1458=0 -0 ;while true do if (v1458==1) then v122=false;break;end if (v1458==(0 -0)) then v34.Visible=false;v121.Visible=true;v1458=1 + 0 ;end end end);break;end if (v606==(0 + 0)) then if (v122 atau tidak v34.Terlihat) lalu kembali;akhir v122=true;v606=1;akhir akhir akhir v70(v36,v34);v70(v121,v121,v123);v40.Diaktifkan:Hubungkan(v124);fungsi v30() v29(true);v95();v112();untuk v1087,v1088 dalam ipairs(v27) lakukan pcall(fungsi() v1088:Putuskan();akhir);akhir v25(v35,476.18 -(296 + 180) ,{Skala=v33 * (1403.8 -(1183 + 220)) });tugas.tunda(1265.2 -(1037 + 228) ,fungsi() pcall(fungsi() v31:Destroy();end);end);end getgenv().HubStop=v30;v41.Activated:Connect(v30);v27[ #v27 + (1 -0) ]=v6.InputBegan:Connect(function(v607,v608) if v608 then return;end if (v607.KeyCode==Enum.KeyCode.RightShift) then if v34.Visible then v124();else v123();end end end);v35.Scale=v33 * (0.85 -0) ;v25(v35,0.3 -0 ,{Scale=v33},Enum.EasingStyle.Back);v56("Fian792 Hub v" .. v0 .. " siap" ,v16.acc);print("Fian792 Hub v" .. v0 .. " siap(Auto DF v" .. v1 .. "+Clear World v" .. v2 .. ")" );Connect(function(v607,v608) if v608 then return;end if (v607.KeyCode==Enum.KeyCode.RightShift) then if v34.Visible then v124();else v123();end end end);v35.Scale=v33 * (0.85 -0) ;v25(v35,0.3 -0 ,{Scale=v33},Enum.EasingStyle.Back);v56("Fian792 Hub v" .. v0 .. " siap" ,v16.acc);print("Fian792 Hub v" .. v0 .. " siap(Auto DF v" .. v1 .. "+Clear World v" .. v2 .. ")" );Connect(function(v607,v608) if v608 then return;end if (v607.KeyCode==Enum.KeyCode.RightShift) then if v34.Visible then v124();else v123();end end end);v35.Scale=v33 * (0.85 -0) ;v25(v35,0.3 -0 ,{Scale=v33},Enum.EasingStyle.Back);v56("Fian792 Hub v" .. v0 .. " siap" ,v16.acc);print("Fian792 Hub v" .. v0 .. " siap(Auto DF v" .. v1 .. "+Clear World v" .. v2 .. ")" );
